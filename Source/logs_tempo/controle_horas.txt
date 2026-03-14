@@ -1,0 +1,5 @@
+# Controle de Horas - Desenvolvimento de Testes Automatizados
+# Data | Atividade | Horas | Descrição
+# Exemplo:
+2026-03-10 | Setup Cypress | 2.5 | Instalação e configuração inicial da ferramenta.
+# Adicione linhas conforme avança no desenvolvimento.

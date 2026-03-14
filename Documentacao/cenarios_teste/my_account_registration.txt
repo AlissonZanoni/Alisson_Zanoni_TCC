@@ -1,0 +1,51 @@
+# Cenários de Teste - My Account (Registro)
+
+1. Registro - Criar conta.
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL “http://practice.automationtesting.in/”.
+   3. Clique no menu "My Account".
+   4. Insira o endereço de e-mail registrado na caixa de texto de endereço de e-mail.
+   5. Insira sua própria senha na caixa de texto de senha.
+   6. Clique no botão "Registrar".
+   7. O usuário será registrado com sucesso e será redirecionado para a página inicial.
+
+2. Registro com endereço de e-mail inválido.
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL “http://practice.automationtesting.in/”.
+   3. Clique no menu "My Account".
+   4. Insira um endereço de e-mail inválido na caixa de texto de endereço de e-mail.
+   5. Insira sua própria senha na caixa de texto de senha.
+   6. Clique no botão "Registrar".
+   7. O registro deve falhar com uma mensagem de aviso (ex.: Você deve inserir um endereço de e-mail válido).
+
+3. Registro com endereço de e-mail vazio.
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL “http://practice.automationtesting.in/”.
+   3. Clique no menu "My Account".
+   4. Insira um endereço de e-mail vazio na caixa de texto de endereço de e-mail.
+   5. Insira sua própria senha na caixa de texto de senha.
+   6. Clique no botão "Registrar".
+   7. O registro deve falhar com uma mensagem de aviso (ex.: Por favor, forneça um endereço de e-mail válido).
+
+4. Registro com senha vazia.
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL “http://practice.automationtesting.in/”.
+   3. Clique no menu "My Account".
+   4. Insira um endereço de e-mail válido na caixa de texto de endereço de e-mail.
+   5. Insira uma senha vazia na caixa de texto de senha.
+   6. Clique no botão "Registrar".
+   7. O registro deve falhar com uma mensagem de aviso (ex.: Por favor, insira uma senha para a conta).
+
+5. Registro com endereço de e-mail e senha vazios.
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL “http://practice.automationtesting.in/”.
+   3. Clique no menu "My Account".
+   4. Insira um endereço de e-mail vazio na caixa de texto de endereço de e-mail.
+   5. Insira uma senha vazia na caixa de texto de senha.
+   6. Clique no botão "Registrar".
+   7. O registro deve falhar com uma mensagem de aviso (ex.: Por favor, forneça um endereço de e-mail válido).

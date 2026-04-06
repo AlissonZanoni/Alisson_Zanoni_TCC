@@ -1,0 +1,25 @@
+{
+  "name": "tcc-automacao-testes",
+  "version": "1.0.0",
+  "description": "Automação de testes para TCC - Comparação entre testes manuais e automatizados",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:headed": "cypress run --headed",
+    "test:report": "cypress run --reporter junit",
+    "test:report:headed": "cypress run --headed --reporter junit",
+    "test:dashboard": "cypress run --record"
+  },
+  "keywords": [
+    "cypress",
+    "automacao",
+    "testes",
+    "e2e"
+  ],
+  "author": "AlissonZanoni",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "15.13.0"
+  }
+}

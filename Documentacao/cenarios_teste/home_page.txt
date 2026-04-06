@@ -6,8 +6,7 @@
    2. Insira a URL “http://practice.automationtesting.in/”.
    3. Clique no menu "Shop".
    4. Agora clique no botão do menu "Home".
-   5. Verifique se a página inicial possui apenas três sliders.
-   6. A página inicial deve conter exatamente três sliders.
+   5. A página inicial deve conter exatamente três sliders.
 
 2. Página inicial com apenas três "Arrivals".
    Passos:

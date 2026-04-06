@@ -1,107 +1,81 @@
-# Cenários de Teste - My Account
+# Cenários de Teste - My Account (Login)
 
-1. Dashboard
+1. Login com nome de usuário e senha válidos.
    Passos:
    1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
+   2. Insira a URL “http://practice.automationtesting.in/”.
    3. Clique no menu "My Account".
    4. Insira o nome de usuário registrado na caixa de texto de nome de usuário.
    5. Insira a senha na caixa de texto de senha.
    6. Clique no botão de login.
    7. O usuário deve fazer login com sucesso na página da web.
-   8. Clique no link "My Account", que leva ao Dashboard.
-   9. O usuário deve visualizar o Dashboard do site.
 
-2. Pedidos
+2. Login com nome de usuário e senha incorretos.
    Passos:
    1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
+   2. Insira a URL “http://practice.automationtesting.in/”.
    3. Clique no menu "My Account".
-   4. Insira o nome de usuário registrado na caixa de texto de nome de usuário.
-   5. Insira a senha na caixa de texto de senha.
+   4. Insira um nome de usuário incorreto na caixa de texto de nome de usuário.
+   5. Insira uma senha incorreta na caixa de texto de senha.
    6. Clique no botão de login.
-   7. O usuário deve fazer login com sucesso na página da web.
-   8. Clique no link "My Account".
-   9. Clique no link "Orders".
-  10. O usuário deve visualizar seus pedidos ao clicar no link "Orders".
+   7. Uma mensagem de erro adequada deve ser exibida (ex.: Nome de usuário inválido) e solicitar que o login seja inserido novamente.
 
-3. Detalhes dos Pedidos
+3. Login com nome de usuário correto e senha vazia.
    Passos:
    1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
+   2. Insira a URL “http://practice.automationtesting.in/”.
    3. Clique no menu "My Account".
-   4. Insira o nome de usuário registrado na caixa de texto de nome de usuário.
-   5. Insira a senha na caixa de texto de senha.
+   4. Insira um nome de usuário válido na caixa de texto de nome de usuário.
+   5. Agora insira uma senha vazia na caixa de texto de senha.
    6. Clique no botão de login.
-   7. O usuário deve fazer login com sucesso na página da web.
-   8. Clique no link "My Account".
-   9. Clique no link "Orders".
-  10. Clique no botão "View".
-  11. O usuário deve visualizar os detalhes do pedido, detalhes do cliente e detalhes de cobrança ao clicar no botão "View".
+   7. Uma mensagem de erro adequada deve ser exibida (ex.: Senha inválida) e solicitar que o login seja inserido novamente.
 
-4. Informações do Pedido
+4. Login com nome de usuário vazio e senha válida.
    Passos:
    1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
+   2. Insira a URL “http://practice.automationtesting.in/”.
    3. Clique no menu "My Account".
-   4. Insira o nome de usuário registrado na caixa de texto de nome de usuário.
-   5. Insira a senha na caixa de texto de senha.
+   4. Insira um nome de usuário vazio na caixa de texto de nome de usuário.
+   5. Agora insira uma senha válida na caixa de texto de senha.
    6. Clique no botão de login.
-   7. O usuário deve fazer login com sucesso na página da web.
-   8. Clique no link "My Account".
-   9. Clique no link "Orders".
-  10. Clique no botão "View".
-  11. O usuário deve visualizar o número do pedido, a data do pedido e o status do pedido ao clicar no botão "View".
+   7. Uma mensagem de erro adequada deve ser exibida (ex.: Nome de usuário inválido) e solicitar que o login seja inserido novamente.
 
-5. Endereço
+5. Login com nome de usuário e senha vazios.
    Passos:
    1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
+   2. Insira a URL “http://practice.automationtesting.in/”.
    3. Clique no menu "My Account".
-   4. Insira o nome de usuário registrado na caixa de texto de nome de usuário.
-   5. Insira a senha na caixa de texto de senha.
+   4. Insira um nome de usuário vazio na caixa de texto de nome de usuário.
+   5. Agora insira uma senha vazia na caixa de texto de senha.
    6. Clique no botão de login.
-   7. O usuário deve fazer login com sucesso na página da web.
-   8. Clique no link "My Account", que leva ao Dashboard.
-   9. Clique no link "Address".
-  10. O usuário deve visualizar o endereço de cobrança e o endereço de envio.
+   7. Uma mensagem de erro adequada deve ser exibida (ex.: Nome de usuário obrigatório) e solicitar que o login seja inserido novamente.
 
-6. Editar Endereço de Envio
+6. Login - A senha deve ser mascarada.
    Passos:
    1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
+   2. Insira a URL “http://practice.automationtesting.in/”.
    3. Clique no menu "My Account".
-   4. Insira o nome de usuário registrado na caixa de texto de nome de usuário.
-   5. Insira a senha na caixa de texto de senha.
-   6. Clique no botão de login.
-   7. O usuário deve fazer login com sucesso na página da web.
-   8. Clique no link "My Account".
-   9. Clique no link "Address".
-  10. Clique em "Edit" no endereço de envio.
-  11. O usuário pode editar o endereço de envio.
+   4. Insira alguns caracteres no campo de senha.
+   5. O campo de senha deve exibir os caracteres como asteriscos ou pontos, de forma que a senha não seja visível na tela.
 
-7. Detalhes da Conta
+7. Login - Diferenciação de maiúsculas e minúsculas.
    Passos:
    1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
+   2. Insira a URL “http://practice.automationtesting.in/”.
    3. Clique no menu "My Account".
-   4. Insira o nome de usuário registrado na caixa de texto de nome de usuário.
-   5. Insira a senha na caixa de texto de senha.
-   6. Clique no botão de login.
-   7. O usuário deve fazer login com sucesso na página da web.
-   8. Clique no link "My Account".
-   9. Clique no link "Account Details".
-  10. O usuário pode visualizar os detalhes da conta, onde também pode alterar sua senha.
+   4. Insira o nome de usuário com letras maiúsculas/minúsculas alteradas na caixa de texto de nome de usuário.
+   5. Insira a senha com letras maiúsculas/minúsculas alteradas na caixa de texto de senha.
+   6. Agora clique no botão de login.
+   7. O login deve falhar, exibindo uma mensagem de nome de usuário/senha incorretos.
 
-8. Logout
+8. Login - Autenticação.
    Passos:
    1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
+   2. Insira a URL “http://practice.automationtesting.in/”.
    3. Clique no menu "My Account".
-   4. Insira o nome de usuário registrado na caixa de texto de nome de usuário.
-   5. Insira a senha na caixa de texto de senha.
-   6. Clique no botão de login.
-   7. O usuário deve fazer login com sucesso na página da web.
-   8. Clique no link "My Account".
-   9. Clique no botão "Logout".
-  10. Ao clicar em "Logout", o usuário sai com sucesso do site.
+   4. Insira o nome de usuário com letras maiúsculas/minúsculas alteradas na caixa de texto de nome de usuário.
+   5. Insira a senha com letras maiúsculas/minúsculas alteradas na caixa de texto de senha.
+   6. Agora clique no botão de login.
+   7. Depois de fazer login, saia do site.
+   8. Agora pressione o botão voltar.
+   9. O usuário não deve estar logado em sua conta; em vez disso, uma página geral deve ser exibida.

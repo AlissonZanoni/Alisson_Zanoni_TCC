@@ -15,6 +15,7 @@
 import './home_page/commands'
 import './home_page/cenario_01_tres_sliders'
 import './home_page/cenario_02_arrivals'
+import './home_page/cenario_03_imagens_arrivals_navegacao'
 import './my_account_login/commands'
 import './my_account_registration/commands'
 import './my_account/commands'

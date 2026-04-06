@@ -1,5 +1,6 @@
 // ===================================
 // Comandos Customizados - Home Page
+// Funções Comuns (compartilhadas entre cenários)
 // ===================================
 
 // Passo 1 e 2: Abra o navegador e insira a URL
@@ -21,10 +22,4 @@ Cypress.Commands.add('clicarNoMenuShop', () => {
 Cypress.Commands.add('clicarNoMenuHome', () => {
   cy.contains('a', 'Home').click()
   cy.wait(1000) // Aguarda o carregamento da página
-})
-
-// Passo 5: Verifique se a página inicial possui a quantidade especificada de sliders
-Cypress.Commands.add('verificarQuantidadeSliders', (expectedCount) => {
-  // NextendSlider usa a classe .n2-ss-slide para cada slide
-  cy.get('.n2-ss-slide').should('have.length', expectedCount)
 })

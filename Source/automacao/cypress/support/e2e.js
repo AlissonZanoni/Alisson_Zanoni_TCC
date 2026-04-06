@@ -10,8 +10,11 @@
 // 'supportFile' configuration option.
 // ===================================
 
-// Import commands from all sections
+// Import commands from all sections and scenarios
+// IMPORTANTE: Importar commands comuns ANTES dos cenários específicos
 import './home_page/commands'
+import './home_page/cenario_01_tres_sliders'
+import './home_page/cenario_02_arrivals'
 import './my_account_login/commands'
 import './my_account_registration/commands'
 import './my_account/commands'

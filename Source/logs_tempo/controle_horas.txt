@@ -1,6 +1,5 @@
 # Controle de Horas - Desenvolvimento de Testes Automatizados
 # Data | Atividade | Horas | Descrição
 # Exemplo:
-2026-03-10 | Setup Cypress | 2.5 | Instalação e configuração inicial da ferramenta.
-2026-04-05 21:00-21:20 21:40 | Desenvolvimento - Cenário 01 Home Page | 0.20 | Estruturação de pastas (e2e com subpastas por seção), criação do primeiro teste automatizado (três sliders), configuração cypress.config.js, package.json, arquivos de suporte (commands.js, e2e.js), README com documentação. Instalação Node.js e npm. Testes preliminares com ajustes de seletores CSS em progresso.
+2026-04-05 21:00-21:20 21:40-23:45 | Desenvolvimento - Cenários 01, 02 e 03 Home Page | 02:25 | Setup e estruturation: Estruturação de pastas (e2e com subpastas por seção: home_page, my_account, shop, etc.), configuração cypress.config.js, package.json com Cypress 15.13.0 (pinned), instalação Node.js e npm, criação de arquivos de suporte (commands.js por seção, e2e.js). Desenvolvimento dos 3 primeiros cenários: Cenário 01 (validar 3 sliders), Cenário 02 (validar 3 arrivals), Cenário 03 (validar navegação via clique em imagem com título). Refatoração para remover navegação redundante (Shop/Home clicks). Implementação de assertions robustas usando captura de h3 title antes do clique. Simplificação de testes para focar em UMA feature específica cada. Commit com 5 alterações.
 # Adicione linhas conforme avança no desenvolvimento.

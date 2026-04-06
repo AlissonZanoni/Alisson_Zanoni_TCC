@@ -4,30 +4,20 @@
    Passos:
    1. Abra o navegador.
    2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "Shop".
-   4. Agora clique no botão do menu "Home".
-   5. A página inicial deve conter exatamente três sliders.
+   3. A página inicial deve conter exatamente três sliders.
 
 2. Página inicial com apenas três "Arrivals".
    Passos:
    1. Abra o navegador.
    2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "Shop".
-   4. Agora clique no botão do menu "Home".
-   5. Verifique se a página inicial possui apenas três "Arrivals".
-   6. A página inicial deve conter exatamente três "Arrivals".
+   3. A página inicial deve conter exatamente três "Arrivals".
 
 3. Página inicial - Imagens em "Arrivals" devem navegar corretamente.
    Passos:
    1. Abra o navegador.
    2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "Shop".
-   4. Agora clique no botão do menu "Home".
-   5. Verifique se a página inicial possui apenas três "Arrivals".
-   6. A página inicial deve conter exatamente três "Arrivals".
-   7. Agora clique na imagem em "Arrivals".
-   8. Verifique se está navegando para a próxima página onde o usuário pode adicionar o livro ao carrinho.
-   9. A imagem deve ser clicável e navegar para a próxima página onde o usuário pode adicionar o livro ao carrinho.
+   3. Agora clique em um "Arrival".
+   4. Verifique se está navegando para a página do Arrival selecionado.
 
 4. Página inicial - "Arrivals" - Descrição das imagens.
    Passos:

@@ -19,7 +19,17 @@
    3. Agora clique em um "Arrival".
    4. Verifique se está navegando para a página do Arrival selecionado.
 
-4. Página inicial - "Arrivals" - Descrição das imagens.
+
+4. Página inicial - Verificação do preço e botão carrinho no Arrival
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL “http://practice.automationtesting.in/”.
+   3. Verifique na sessão arrival contém o título.
+   4. Verifique na sessão arrival contém o preço.
+   5. O Arrival deve conter o botão ADD TO BASKET.
+
+
+5. Página inicial - "Arrivals" - Descrição das imagens.
    Passos:
    1. Abra o navegador.
    2. Insira a URL “http://practice.automationtesting.in/”.

@@ -13,7 +13,7 @@
 // Import commands from all sections and scenarios
 // IMPORTANTE: Importar commands comuns ANTES dos cenários específicos
 import './home_page/commands'
-import './home_page/cenario_01_tres_sliders'
+import './home_page/cenario_01_sliders'
 import './home_page/cenario_02_arrivals'
 import './home_page/cenario_03_imagens_arrivals_navegacao'
 import './my_account_login/commands'

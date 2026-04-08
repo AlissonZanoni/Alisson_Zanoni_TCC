@@ -2,60 +2,40 @@
 
 1. Página inicial com apenas três sliders.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. A página inicial deve conter exatamente três sliders.
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. A página inicial deve conter exatamente três sliders.
 
 2. Página inicial com apenas três "Arrivals".
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. A página inicial deve conter exatamente três "Arrivals".
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. A página inicial deve conter exatamente três "Arrivals".
 
 3. Página inicial - Imagens em "Arrivals" devem navegar corretamente.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Agora clique em um "Arrival".
-   4. Verifique se está navegando para a página do Arrival selecionado.
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Agora clique em um "Arrival".
+   3. Verifique se está navegando para a página do Arrival selecionado.
 
-
-4. Página inicial - Verificação do preço e botão carrinho no Arrival
+4. Home Page - Cenário 04: Verificação do preço e botão 'ADD TO BASKET' no Arrival
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Verifique na sessão arrival contém o título.
-   4. Verifique na sessão arrival contém o preço.
-   5. O Arrival deve conter o botão ADD TO BASKET.
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Localize a seção "Arrivals" na página inicial.
+   3. Verifique que cada Arrival exibe o título do produto.
+   4. Verifique que cada Arrival exibe o preço do produto.
+   5. Verifique que cada Arrival possui o botão "ADD TO BASKET" visível e clicável.
 
-
-5. Página inicial - "Arrivals" - Descrição das imagens.
+5. Página inicial - Validar o header da página
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "Shop".
-   4. Agora clique no botão do menu "Home".
-   5. Verifique se a página inicial possui apenas três "Arrivals".
-   6. A página inicial deve conter exatamente três "Arrivals".
-   7. Agora clique na imagem em "Arrivals".
-   8. Verifique se está navegando para a próxima página onde o usuário pode adicionar o livro ao carrinho.
-   9. A imagem deve ser clicável e navegar para a próxima página onde o usuário pode adicionar o livro ao carrinho.
-   10. Clique na aba "Descrição" para o livro que você clicou.
-   11. Deve haver uma descrição sobre o livro que o usuário clicou.
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Verifique a exibição da logo
+   3. Verifique a exibição do Shop
+   4. Verifique a exibição do My Account
+   5. Verifique a exibição do Test Cases
+   6. Verifique a exibição do AT Site
+   7. Verifique a exibição do Demo Site
+   8. Verifique a exibição do Carrinho
+   9. Todos os itens deve redirecionar corretamente para suas páginas
 
-5. Página inicial - "Arrivals" - Avaliações das imagens.
-   Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "Shop".
-   4. Agora clique no botão do menu "Home".
-   5. Verifique se a página inicial possui apenas três "Arrivals".
-   6. A página inicial deve conter exatamente três "Arrivals".
-   7. Agora clique na imagem em "Arrivals".
-   8. Verifique se está navegando para a próxima página onde o usuário pode adicionar o livro ao carrinho.
-   9. A imagem deve ser clicável e navegar para a próxima página onde o usuário pode adicionar o livro ao carrinho.
-   10. Agora clique na aba "Avaliações" para o livro que você clicou.
-   11. Deve haver avaliações sobre o livro que o usuário clicou.
 
 6. Página inicial - "Arrivals" - Imagens - Adicionar ao carrinho.
    Passos:

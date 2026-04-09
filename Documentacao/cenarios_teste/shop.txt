@@ -1,120 +1,81 @@
 # Cenários de Teste - Loja
 
-1. Filtrar por Preço
+1. Validar o header da página
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
-   3. Clique no menu Loja.
-   4. Ajuste o filtro de preço entre 150 e 450 rps.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Visualize o header contendo Home/Shop
+   4. O usuário pode voltar pra Home clicando no link
+
+2. Validar as categorias dos produtos
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Visualize as categorias dos produtos
+   4. Cada categoria deve filtrar e exibir a quantidade de produtos corretamente
+
+3. Validar filtro por Popularidade
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Selecionar o filtro por Popularidade
+   4. Deve reoordenar a lista dos produtos
+
+4. Validar filtro por Avaliações
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Selecionar o filtro por Avaliações
+   4. Deve reoordenar a lista dos produtos
+
+5. Validar filtro por Novidades
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Selecionar o filtro por Novidades
+   4. Deve reoordenar a lista dos produtos
+
+6. Validar filtro por Preço Crescente
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Selecionar o filtro por Preço Crescente
+   4. Deve reoordenar a lista dos produtos
+
+7. Validar filtro por Preço Decrescente
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Selecionar o filtro por Preço Decrescente
+   4. Deve reoordenar a lista dos produtos
+
+8. Filtrar por Alcance de Preço
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Ajuste o filtro de preço entre 100 e 200 rps.
    5. Clique no botão Filtrar.
-   6. O usuário pode visualizar apenas livros com preço entre 150 e 450 rps.
-
-2. Categorias de Produtos
-   Passos:
-   1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
-   3. Clique no menu Loja.
-   4. Clique em qualquer link de produto disponível na categoria de produtos.
-   5. O usuário pode visualizar apenas aquele produto específico.
-
-3. Ordenação Padrão - Popularidade
-   Passos:
-   1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
-   3. Clique no menu Loja.
-   4. Clique na opção "Ordenar por Popularidade" no menu de ordenação padrão.
-   5. O usuário pode visualizar apenas os produtos populares.
-
-4. Ordenação Padrão - Avaliações Médias
-   Passos:
-   1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
-   3. Clique no menu Loja.
-   4. Clique na opção "Ordenar por Avaliações Médias" no menu de ordenação padrão.
-   5. O usuário pode visualizar apenas os produtos populares.
-
-5. Ordenação Padrão - Novidades
-   Passos:
-   1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
-   3. Clique no menu Loja.
-   4. Clique na opção "Ordenar por Novidades" no menu de ordenação padrão.
-   5. O usuário pode visualizar apenas os produtos populares.
-
-6. Ordenação Padrão - Preço: Baixo para Alto
-   Passos:
-   1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
-   3. Clique no menu Loja.
-   4. Clique na opção "Ordenar por Preço: Baixo para Alto" no menu de ordenação padrão.
-   5. O usuário pode visualizar apenas os produtos populares.
-
-7. Ordenação Padrão - Preço: Alto para Baixo
-   Passos:
-   1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
-   3. Clique no menu Loja.
-   4. Clique na opção "Ordenar por Preço: Alto para Baixo" no menu de ordenação padrão.
-   5. O usuário pode visualizar apenas os produtos populares.
-
-8. Leia Mais
-   Passos:
-   1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
-   3. Clique no menu Loja.
-   4. Clique no botão "Leia Mais" na página inicial.
-   5. A opção "Leia Mais" indica que o produto está fora de estoque.
-   6. O usuário não pode adicionar ao carrinho produtos com a opção "Leia Mais".
+   6. O usuário pode visualizar apenas livros com preço entre 100 e 200 rps.
 
 9. Promoção
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL "http://practice.automationtesting.in/".
-   3. Clique no menu Loja.
-   4. Clique em um produto com a indicação de "Promoção" na página inicial.
-   5. O usuário pode visualizar claramente o preço atual com o preço antigo riscado para os produtos em promoção.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Tenha um produto em promoçao na listagem .
+   5. O usuário pode visualizar o preço atual com o preço antigo riscado para os produtos em promoção.
 
-10. Adicionar ao Carrinho e Visualizar Carrinho
-    Passos:
-    1. Abra o navegador.
-    2. Insira a URL "http://practice.automationtesting.in/".
-    3. Clique no menu Loja.
-    4. Clique no botão "Adicionar ao Carrinho" para adicionar o livro ao carrinho.
-    5. O usuário pode visualizar o livro no item do menu com o preço.
-    6. Clique no link "Visualizar Carrinho", que navega para a página de finalização da compra.
-    7. O usuário pode encontrar os valores total e subtotal acima do botão "Finalizar Compra".
-    8. O total sempre é menor que o subtotal devido aos impostos adicionados ao subtotal.
-    9. Clique no botão "Finalizar Compra", que navega para a página de pagamento.
-   10. O usuário pode visualizar os detalhes de cobrança, detalhes do pedido, detalhes adicionais e detalhes do gateway de pagamento.
-   11. O usuário pode preencher seus dados no formulário de cobrança e optar por qualquer método de pagamento no gateway, como transferência bancária direta, cheque, dinheiro ou PayPal.
-   12. Clique no botão "Fazer Pedido" para concluir o processo.
-   13. Ao clicar no botão "Fazer Pedido", o usuário conclui o processo, e a página navega para a página de confirmação do pedido com detalhes do pedido, detalhes bancários, detalhes do cliente e detalhes de cobrança.
+10. Exibição dos produtos
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Deve ser apresentado a listagem dos produtos.
+   4. Cada produto deverá conter título
+   5. Cada produto deverá conter Preço.
+   6. Cada produto deverá conter o botão para adicionar ao carrinho
 
-11. Adicionar ao Carrinho e Visualizar Carrinho pelo Link do Item
-    Passos:
-    1. Abra o navegador.
-    2. Insira a URL "http://practice.automationtesting.in/".
-    3. Clique no menu Loja.
-    4. Clique no botão "Adicionar ao Carrinho" para adicionar o livro ao carrinho.
-    5. O usuário pode visualizar o livro no item do menu com o preço.
-    6. Clique no link do item, que navega para a página de finalização da compra.
-    7. O usuário pode encontrar os valores total e subtotal acima do botão "Finalizar Compra".
-    8. O total sempre é menor que o subtotal devido aos impostos adicionados ao subtotal.
-    9. Clique no botão "Finalizar Compra", que navega para a página de pagamento.
-   10. O usuário pode visualizar os detalhes de cobrança, detalhes do pedido, detalhes adicionais e detalhes do gateway de pagamento.
-   11. O usuário pode preencher seus dados no formulário de cobrança e optar por qualquer método de pagamento no gateway, como transferência bancária direta, cheque, dinheiro ou PayPal.
-   12. Clique no botão "Fazer Pedido" para concluir o processo.
-   13. Ao clicar no botão "Fazer Pedido", o usuário conclui o processo, e a página navega para a página de confirmação do pedido com detalhes do pedido, detalhes bancários, detalhes do cliente e detalhes de cobrança.
-
-12. Adicionar ao Carrinho e Visualizar Carrinho - Impostos
-    Passos:
-    1. Abra o navegador.
-    2. Insira a URL "http://practice.automationtesting.in/".
-    3. Clique no menu Loja.
-    4. Clique no botão "Adicionar ao Carrinho" para adicionar o livro ao carrinho.
-    5. O usuário pode visualizar o livro no item do menu com o preço.
-    6. Clique no link do item, que navega para a página de finalização da compra.
-    7. O usuário pode encontrar os valores total e subtotal acima do botão "Finalizar Compra".
-    8. O total sempre é menor que o subtotal devido aos impostos adicionados ao subtotal.
-    9. A taxa de imposto varia para a Índia em comparação com outros países.
-   10. A taxa de imposto para a Índia deve ser de 2% e, para o exterior, deve ser de 5%.
+11. Redirecionamento para o produto
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu Shop.
+   3. Clicar em um produto da lista.
+   4. Deverá ser redirecionado para a pagina do produto.

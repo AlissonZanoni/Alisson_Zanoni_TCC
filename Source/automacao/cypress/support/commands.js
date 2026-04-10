@@ -34,3 +34,14 @@ Cypress.Commands.add('clicarNoMenuHome', () => {
   cy.contains('a', 'Home').click()
   cy.wait(1000) // Aguarda o carregamento da página
 })
+
+// Utilitário compartilhado: gera email único para registros
+Cypress.Commands.add('generateUniqueEmail', () => {
+  return `registro_${Date.now()}@example.com`
+})
+
+// Comando global: clicar no menu My Account (compartilhado entre login e registro)
+Cypress.Commands.add('clicarNoMenuMyAccount', () => {
+  cy.contains('a', 'My Account').click()
+  cy.wait(600)
+})

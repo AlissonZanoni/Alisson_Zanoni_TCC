@@ -33,6 +33,8 @@ import './shop/cenario_10_exibicao_produtos'
 import './shop/cenario_11_validar_redirecionamento_produto'
 import './my_account_login/commands'
 import './my_account_registration/commands'
+import './my_account_registration/cenario_01_registro'
+import './my_account_registration/cenario_02_registro_email_invalido'
 import './my_account/commands'
 
 // Ignorar erros não capturados de scripts de terceiros (Google AdSense, Analytics, etc)

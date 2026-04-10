@@ -127,6 +127,16 @@ npm run test:headed
 ### My Account - Registro
 - Testes de registro e criação de conta
   - Localização: `cypress/e2e/my_account_registration/`
+  - Cenários (exemplos):
+    - `cenario_01_registro.cy.js`
+    - `cenario_02_registro_email_invalido.cy.js`
+    - `cenario_03_registro_email_vazio.cy.js`
+    - `cenario_04_registro_senha_vazia.cy.js`
+    - `cenario_05_registro_email_e_senha_vazios.cy.js`
+    - `cenario_06_registro_senha_muito_fraca.cy.js`
+    - `cenario_07_registro_senha_fraca.cy.js`
+    - `cenario_08_registro_senha_medio.cy.js`
+    - `cenario_09_registro_senha_forte.cy.js`
 
 ### My Account - Área Logada
 - Testes de funcionalidades após login (Dashboard, Pedidos, Endereços, etc)

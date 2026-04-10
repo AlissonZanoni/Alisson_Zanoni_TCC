@@ -2,50 +2,83 @@
 
 1. Registro - Criar conta.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "My Account".
-   4. Insira o endereço de e-mail registrado na caixa de texto de endereço de e-mail.
-   5. Insira sua própria senha na caixa de texto de senha.
-   6. Clique no botão "Registrar".
-   7. O usuário será registrado com sucesso e será redirecionado para a página inicial.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu "My Account".
+   3. Insira o endereço de e-mail registrado na caixa de texto de endereço de e-mail.
+   4. Insira sua própria senha na caixa de texto de senha.
+   5. Clique no botão "Registrar".
+   6. O usuário será registrado com sucesso e será redirecionado para a página inicial.
 
 2. Registro com endereço de e-mail inválido.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "My Account".
-   4. Insira um endereço de e-mail inválido na caixa de texto de endereço de e-mail.
-   5. Insira sua própria senha na caixa de texto de senha.
-   6. Clique no botão "Registrar".
-   7. O registro deve falhar com uma mensagem de aviso (ex.: Você deve inserir um endereço de e-mail válido).
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu "My Account".
+   3. Insira um endereço de e-mail inválido na caixa de texto de endereço de e-mail.
+   4. Insira sua própria senha na caixa de texto de senha.
+   5. Clique no botão "Registrar".
+   6. O registro deve falhar com uma mensagem de aviso (ex.: Você deve inserir um endereço de e-mail válido).
 
-3. Registro com endereço de e-mail vazio.
+3. Registro com endereço de e-mail vazio - Validar botão Register desabilitado (Bug-Tracking).
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "My Account".
-   4. Insira um endereço de e-mail vazio na caixa de texto de endereço de e-mail.
-   5. Insira sua própria senha na caixa de texto de senha.
-   6. Clique no botão "Registrar".
-   7. O registro deve falhar com uma mensagem de aviso (ex.: Por favor, forneça um endereço de e-mail válido).
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu "My Account".
+   3. Preencha o campo de senha com uma senha válida.
+   4. Deixe o campo de email vazio (não interagir).
+   5. Verifique o estado do botão "Registrar" (Register).
+   6. Resultado Esperado: o botão "Registrar" deve estar desabilitado (regra de negócio).
+   Observação: Cenário de validação de bugfix - atualmente o botão fica habilitado quando deveria estar desabilitado.
 
-4. Registro com senha vazia.
+4. Registro com senha vazia - Validar botão Register desabilitado (Bug-Tracking).
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "My Account".
-   4. Insira um endereço de e-mail válido na caixa de texto de endereço de e-mail.
-   5. Insira uma senha vazia na caixa de texto de senha.
-   6. Clique no botão "Registrar".
-   7. O registro deve falhar com uma mensagem de aviso (ex.: Por favor, insira uma senha para a conta).
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu "My Account".
+   3. Preencha o campo de email com um email único/válido.
+   4. Deixe o campo de senha vazio (não interagir).
+   5. Verifique o estado do botão "Registrar" (Register).
+   6. Resultado Esperado: o botão "Registrar" deve estar desabilitado (regra de negócio).
+   Observação: Cenário de validação de bugfix - atualmente o botão fica habilitado quando deveria estar desabilitado.
 
-5. Registro com endereço de e-mail e senha vazios.
+5. Registro com email e senha vazios - Validar botão Register desabilitado (Bug-Tracking).
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
-   3. Clique no menu "My Account".
-   4. Insira um endereço de e-mail vazio na caixa de texto de endereço de e-mail.
-   5. Insira uma senha vazia na caixa de texto de senha.
-   6. Clique no botão "Registrar".
-   7. O registro deve falhar com uma mensagem de aviso (ex.: Por favor, forneça um endereço de e-mail válido).
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu "My Account".
+   3. Não interagir com nenhum campo (email e senha vazios).
+   4. Verifique o estado do botão "Registrar" (Register) ao abrir a página.
+   5. Resultado Esperado: o botão "Registrar" deve estar desabilitado (regra de negócio).
+   6. Observação: Cenário de validação de bugfix - atualmente o botão fica habilitado quando deveria estar desabilitado com campos obrigatórios vazios.
+
+6. registro de senha muito fraca.
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu "My Account".
+   3. Insira um endereço de e-mail único e válido na caixa de texto de endereço de e-mail.
+   4. Insira uma senha claramente muito curta ou fraca (ex.: "Abc").
+   5. Verifique o indicador de força da senha (classe `short` ou `bad`) e a mensagem "Very weak - Please enter a stronger password." or similar.
+   6. Resultado Esperado: o sistema deve identificar a senha como muito fraca e não permitir registro (ou exibir validação clara).
+
+7. registro de senha fraca.
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu "My Account".
+   3. Insira um endereço de e-mail único e válido na caixa de texto de endereço de e-mail.
+   4. Insira uma senha considerada fraca (ex.: "Ab1!23").
+   5. Verifique o indicador de força da senha (classe `bad`) e a mensagem "Weak - Please enter a stronger password.".
+   6. Resultado Esperado: o sistema deve identificar a senha como fraca; pode impedir o registro ou apresentar aviso de força insuficiente.
+
+8. registro de senha medio.
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu "My Account".
+   3. Insira um endereço de e-mail único e válido na caixa de texto de endereço de e-mail.
+   4. Insira uma senha com força média (ex.: "abcdefg").
+   5. Verifique o indicador de força da senha (classe `good` ou mensagem "Medium").
+   6. Resultado Esperado: o sistema deve aceitar a senha como média e permitir registro; pode sugerir melhorias.
+
+9. registro de senha forte.
+   Passos:
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
+   2. Clique no menu "My Account".
+   3. Insira um endereço de e-mail único e válido na caixa de texto de endereço de e-mail.
+   4. Insira uma senha forte com maiúsculas, minúsculas, números e símbolos (ex.: "Abcde1!2").
+   5. Verifique o indicador de força da senha (classe `strong` e mensagem "Strong").
+   6. Resultado Esperado: o sistema deve identificar a senha como forte e permitir registro sem avisos.

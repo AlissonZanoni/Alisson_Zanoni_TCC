@@ -1,0 +1,64 @@
+# Cenários de Teste - My Account (Account Details)
+
+1. Validar estrutura do formulário de edição de conta
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Account Details".
+   6. Verifique que o formulário contém os campos: First name, Last name, Email address.
+   7. Verifique que existe uma seção "Password Change" com campos de senha.
+   8. Verifique que existe um botão "Save changes".
+
+2. Validar atualização de dados pessoais (first name e last name)
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Account Details".
+   6. Limpe o campo "First name" e insira um novo valor com timestamp: "Nome_[timestamp]".
+   7. Limpe o campo "Last name" e insira um novo valor com timestamp: "Sobrenome_[timestamp]".
+   8. Clique no botão "Save changes".
+   9. Verifique que a página é recarregada com mensagem de sucesso.
+   10. Valide que os campos "First name" e "Last name" não estão vazios após a atualização.
+
+3. Validar validação de email inválido
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Account Details".
+   6. Limpe o campo "Email address".
+   7. Insira um email inválido: "emailinvalido".
+   8. Clique no botão "Save changes".
+   9. Verifique que a validação HTML5 impede o envio (ou exibe mensagem de erro).
+   10. O email deve ser rejeitado por ser inválido.
+
+4. Validar erro ao mudar senha com confirmação diferente
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Account Details".
+   6. Insira a senha atual no campo "Current Password".
+   7. Insira uma nova senha no campo "New Password": "NovaSenha@123".
+   8. Insira uma senha diferente no campo "Confirm New Password": "OutraSenha@456".
+   9. Clique no botão "Save changes".
+   10. Verifique que uma mensagem de erro é exibida: "Passwords do not match".
+
+5. Validar que senha atual é necessária para mudança de senha
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Account Details".
+   6. Deixe o campo "Current Password" vazio.
+   7. Insira uma nova senha no campo "New Password": "NovaSenha@123".
+   8. Insira a confirmação no campo "Confirm New Password": "NovaSenha@123".
+   9. Clique no botão "Save changes".
+   10. Verifique que uma mensagem de erro é exibida ou que a mudança é rejeitada.

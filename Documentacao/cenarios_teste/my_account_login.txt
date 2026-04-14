@@ -2,8 +2,7 @@
 
 1. Login com nome de usuário e senha válidos.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    3. Clique no menu "My Account".
    4. Insira o nome de usuário registrado na caixa de texto de nome de usuário.
    5. Insira a senha na caixa de texto de senha.
@@ -12,8 +11,7 @@
 
 2. Login com nome de usuário e senha incorretos.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    3. Clique no menu "My Account".
    4. Insira um nome de usuário incorreto na caixa de texto de nome de usuário.
    5. Insira uma senha incorreta na caixa de texto de senha.
@@ -22,8 +20,7 @@
 
 3. Login com nome de usuário correto e senha vazia.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    3. Clique no menu "My Account".
    4. Insira um nome de usuário válido na caixa de texto de nome de usuário.
    5. Agora insira uma senha vazia na caixa de texto de senha.
@@ -32,8 +29,7 @@
 
 4. Login com nome de usuário vazio e senha válida.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    3. Clique no menu "My Account".
    4. Insira um nome de usuário vazio na caixa de texto de nome de usuário.
    5. Agora insira uma senha válida na caixa de texto de senha.
@@ -42,8 +38,7 @@
 
 5. Login com nome de usuário e senha vazios.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    3. Clique no menu "My Account".
    4. Insira um nome de usuário vazio na caixa de texto de nome de usuário.
    5. Agora insira uma senha vazia na caixa de texto de senha.
@@ -52,30 +47,23 @@
 
 6. Login - A senha deve ser mascarada.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    3. Clique no menu "My Account".
    4. Insira alguns caracteres no campo de senha.
    5. O campo de senha deve exibir os caracteres como asteriscos ou pontos, de forma que a senha não seja visível na tela.
 
 7. Login - Diferenciação de maiúsculas e minúsculas.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    3. Clique no menu "My Account".
    4. Insira o nome de usuário com letras maiúsculas/minúsculas alteradas na caixa de texto de nome de usuário.
    5. Insira a senha com letras maiúsculas/minúsculas alteradas na caixa de texto de senha.
    6. Agora clique no botão de login.
    7. O login deve falhar, exibindo uma mensagem de nome de usuário/senha incorretos.
 
-8. Login - Autenticação.
+8. Login - Checkbox Remember me.
    Passos:
-   1. Abra o navegador.
-   2. Insira a URL “http://practice.automationtesting.in/”.
+   1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    3. Clique no menu "My Account".
-   4. Insira o nome de usuário com letras maiúsculas/minúsculas alteradas na caixa de texto de nome de usuário.
-   5. Insira a senha com letras maiúsculas/minúsculas alteradas na caixa de texto de senha.
-   6. Agora clique no botão de login.
-   7. Depois de fazer login, saia do site.
-   8. Agora pressione o botão voltar.
-   9. O usuário não deve estar logado em sua conta; em vez disso, uma página geral deve ser exibida.
+   4. Verifique se o checkbox "Remember me" está visível na página de login.
+   5. O checkbox com label "Remember me" deve estar presente e disponível para o usuário interagir.

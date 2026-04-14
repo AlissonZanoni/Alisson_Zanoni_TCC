@@ -1,26 +1,25 @@
 // ===================================
 // Comandos Customizados - My Account Login
+// Funções Compartilhadas entre Múltiplos Cenários
 // ===================================
 
 // Comando para acessar a página de login
-Cypress.Commands.add('navigateToLoginPage', () => {
+// Usado em: Cenários 1, 2, 3, 4, 5, 6, 7, 8
+Cypress.Commands.add('acessarPaginaLogin', () => {
   cy.visit('http://practice.automationtesting.in/')
   cy.contains('My Account').click()
 })
 
 // Comando para fazer login com credenciais
-Cypress.Commands.add('loginWithCredentials', (username, password) => {
-  cy.get('input[name="username"]').type(username)
-  cy.get('input[name="password"]').type(password)
-  cy.get('button[name="login"]').click()
+// Usado em: Cenários 1, 2, 7
+Cypress.Commands.add('fazerLoginComCredenciais', (usuario, senha) => {
+  cy.get('input[name="username"]').should('be.visible').clear().type(usuario)
+  cy.get('#password').should('be.visible').clear().type(senha)
+  cy.get('input[name="login"][value="Login"]').should('be.visible').click()
 })
 
 // Comando para verificar mensagem de erro de login
-Cypress.Commands.add('verifyLoginErrorMessage', (errorMessage) => {
-  cy.contains(errorMessage).should('be.visible')
-})
-
-// Comando para verificar login bem-sucedido
-Cypress.Commands.add('verifyLoginSuccess', () => {
-  cy.contains('Dashboard').should('be.visible')
+// Usado em: Cenários 2, 3, 4, 5, 7
+Cypress.Commands.add('verificarMensagemErroLogin', (mensagemErro) => {
+  cy.get('.woocommerce-error').should('be.visible').should('contain', mensagemErro)
 })

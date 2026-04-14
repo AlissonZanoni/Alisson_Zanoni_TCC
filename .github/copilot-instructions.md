@@ -57,6 +57,25 @@ describe('Teste de Login', () => {
 ## Notas Finais
 Estas instruções podem ser ajustadas conforme o projeto evolui. Certifique-se de revisar e atualizar este arquivo regularmente para manter a consistência e a relevância das sugestões do Copilot.
 
+## Instruções Específicas por Pasta
+
+Para detalhes específicos sobre as pastas de testes e suporte, consulte os arquivos:
+
+- **[.github/instructions/testes-e2e.md](.github/instructions/testes-e2e.md)** — Guia completo para desenvolvimento de testes em `cypress/e2e/`
+  - Estrutura de pastas e nomenclatura de cenários
+  - Padrão de desenvolvimento de specs (.cy.js)
+  - Mapeamento: Documentação → Teste Automatizado
+  - Casos especiais (HTML5 validation, força de senha, bug-tracking)
+  - Checklist para PR/Commit
+
+- **[.github/instructions/cypress-support.md](.github/instructions/cypress-support.md)** — Guia completo para desenvolvimento de commands em `cypress/support/`
+  - Organização em três níveis (global, seção, cenário)
+  - Padrão de nomeação descritiva
+  - Estrutura e boas práticas de implementação
+  - Tratamento de validações HTML5 e indicadores de força
+  - Exemplo completo de seção (My Account Registration)
+  - Checklist e troubleshooting
+
 ## Observações Importantes para Desenvolvimento
 
 ### Configuração do Ambiente

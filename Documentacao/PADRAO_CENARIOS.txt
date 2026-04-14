@@ -1,0 +1,141 @@
+# Padrão de Documentação de Cenários de Testes
+
+## Objetivo
+Este documento estabelece o padrão para documentação de cenários de testes no projeto. Todo cenário de teste deve seguir rigorosamente este formato.
+
+## Estrutura Geral
+
+```
+# Cenários de Teste - [Nome da Seção]
+
+1. [Título do Cenário]
+   Passos:
+   1. [Descrição do passo 1]
+   2. [Descrição do passo 2]
+   3. [Descrição do passo 3]
+   ...
+   [N]. [Descrição do último passo]
+
+2. [Título do Próximo Cenário]
+   Passos:
+   ...
+```
+
+## Regras Obrigatórias
+
+### 1. Numeração de Cenários
+- Começar em 1 e seguir sequência consecutiva (1, 2, 3, 4, ...)
+- **NUNCA** pular números
+- Usar formato: `[Número]. [Título do Cenário]`
+- Exemplo correto: 1., 2., 3., 4., 5.
+- Exemplo incorreto: 1., 2., 4., 5. (pulou 3)
+
+### 2. Numeração de Passos
+- **OBRIGATÓRIO**: Começar SEMPRE com passo 1, não com passo 0 ou 2
+- Sequência consecutiva sem exceções: 1, 2, 3, 4, 5, ...
+- **NUNCA** pular números entre passos (ex.: 1, 2, 4 é inválido)
+- **NUNCA** misturar espaços/formatação na numeração
+- Usar ponto (.) depois do número: `1.`, `2.`, `3.`, etc.
+- Formato: `   [Número]. [Descrição do passo]`
+- Exemplo correto:
+  ```
+  Passos:
+  1. Abra o navegador.
+  2. Insira a URL.
+  3. Clique em um elemento.
+  ```
+- Exemplo incorreto (PROIBIDO):
+  ```
+  Passos:
+  1. Abra o navegador e insira a URL.
+  3. Clique em um elemento.
+  ```
+  (Pulou o passo 2)
+
+### 3. Formatação de Passos
+- Cada passo em linha separada
+- Indentar com 3 espaços: `   [Número]. [Descrição]`
+- Descrição deve ser clara e objetiva
+- Uma ação/verificação por linha (evitar múltiplas ações em um passo)
+
+### 4. Título dos Cenários
+- Ser descritivo e objetivo
+- Não usar numeração duplicada ou inconsistente no título
+- Incluir contexto do que está sendo testado
+- Exemplo bom: "Login com nome de usuário e senha válidos"
+- Exemplo ruim: "Teste 1: login" (muito genérico)
+
+### 5. Divisão de Passos Complexos
+- Se um passo contiver múltiplas ações, separar em passos distintos
+- Exemplo ruim (UMA ação em múltiplas ações):
+  ```
+  1. Abra o navegador e insira a URL e clique no link.
+  ```
+- Exemplo correto:
+  ```
+  1. Abra o navegador.
+  2. Insira a URL.
+  3. Clique no link.
+  ```
+
+## Validação de Numeração
+
+Antes de commitar, verificar:
+- [ ] Todos os cenários estão numerados consecutivamente (1, 2, 3, ...)
+- [ ] Nenhum cenário foi pulado
+- [ ] Todos os passos começam com 1
+- [ ] Passos são consecutivos (1, 2, 3, ..., N) sem pulos
+- [ ] Não há passos renumerados fora de ordem (ex.: 1, 3, 2)
+- [ ] Formatação consistente em todos os cenários
+
+## Lista de Seções Atualmente Documentadas
+
+1. **home_page.txt** - Cenários da página inicial (5 cenários)
+2. **shop.txt** - Cenários da loja (11 cenários)
+3. **my_account_login.txt** - Cenários de login (8 cenários)
+4. **my_account_registration.txt** - Cenários de registro (9 cenários)
+5. **my_account.txt** - Cenários da área logada (5 cenários)
+
+**Total: 38 cenários documentados**
+
+## Mapeamento para Specs Cypress
+
+Cada cenário em [arquivo].txt deve ter correlativo em:
+```
+cypress/e2e/[secao]/cenario_[numero]_descricao.cy.js
+```
+
+Exemplo:
+- Documentação: `Documentacao/cenarios_teste/shop.txt` - Cenário 8
+- Spec Cypress: `cypress/e2e/shop/cenario_08_filtrar_preco.cy.js`
+
+## Exemplo Completo
+
+```
+# Cenários de Teste - Shop
+
+1. Validar o header da página
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu Shop.
+   4. Visualize o header contendo Home/Shop.
+   5. Verifique que o usuário pode voltar para Home clicando no link.
+
+2. Validar as categorias dos produtos
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu Shop.
+   4. Visualize as categorias dos produtos.
+   5. Clique em uma categoria.
+   6. Verifique que a categoria filtra e exibe a quantidade de produtos corretamente.
+```
+
+## Observações Importantes
+
+- **Consistência:** Todos os arquivos .txt devem seguir rigorosamente este padrão
+- **Manutenção:** Ao adicionar ou remover cenários, renumerar todos os seguintes
+- **Clareza:** Descrições devem ser claras para qualquer pessoa entender o teste
+- **Rastreabilidade:** Cada cenário no .txt deve ter um spec (.cy.js) no Cypress
+- **Validação Regular:** Revisar este padrão toda mudança significativa na documentação

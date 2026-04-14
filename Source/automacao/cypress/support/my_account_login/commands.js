@@ -23,3 +23,9 @@ Cypress.Commands.add('fazerLoginComCredenciais', (usuario, senha) => {
 Cypress.Commands.add('verificarMensagemErroLogin', (mensagemErro) => {
   cy.get('.woocommerce-error').should('be.visible').should('contain', mensagemErro)
 })
+
+// Comando para verificar que o campo de senha está mascarado
+// Usado em: Cenário 6
+Cypress.Commands.add('verificarCampoSenhaMascarado', () => {
+  cy.get('input[name="password"]').should('have.attr', 'type', 'password')
+})

@@ -54,14 +54,15 @@
    1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    2. Clique no menu Shop.
    3. Ajuste o filtro de preço entre 100 e 200 rps.
-   5. Clique no botão Filtrar.
-   6. O usuário pode visualizar apenas livros com preço entre 100 e 200 rps.
+   4. Clique no botão Filtrar.
+   5. O usuário pode visualizar apenas livros com preço entre 100 e 200 rps.
 
 9. Promoção
    Passos:
    1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    2. Clique no menu Shop.
-   3. Tenha um produto em promoçao na listagem .
+   3. Tenha um produto em promoçao na listagem.
+   4. Verifique o preço atual do produto em promoção.
    5. O usuário pode visualizar o preço atual com o preço antigo riscado para os produtos em promoção.
 
 10. Exibição dos produtos

@@ -90,12 +90,31 @@ describe('Home Page - Cenário 01: Página inicial com apenas três sliders', ()
 
 ## Boas Práticas
 
-1. **Nenhuma lógica no teste** — todo `cy.get()`, `cy.type()`, `cy.click()` deve estar em comandos customizados.
-2. **Nomes de comandos descritivos** — `cy.loginWithCredentials()` é melhor que `cy.login()`.
-3. **Assertions no final** — use `.should()`, `.expect()` para validar comportamento.
-4. **Evitar hardcodes** — use variáveis, fixtures ou commands auxiliares para dados de teste.
-5. **Um cenário por arquivo** — facilita manutenção e rastreabilidade com documentação.
-6. **Timing realista** — use `cy.wait()` apenas quando necessário; prefira `cy.get(...).should('be.visible')`.
+1. **Nenhuma lógica inline no teste** — todo `cy.get()`, `cy.type()`, `cy.click()` deve estar em comandos customizados.
+2. **Nenhuma assertion direta nos specs (.should())** — TODAS as validações devem estar em comandos customizados no `cypress/support/[secao]/commands.js`.
+   - ❌ **PROIBIDO:** `cy.url().should('include', '/my-account/')` 
+   - ❌ **PROIBIDO:** `cy.get('input[name="password"]').should('have.attr', 'type', 'password')`
+   - ❌ **PROIBIDO:** `cy.contains('Order Details').should('be.visible')`
+   - ✅ **CORRETO:** `cy.verificarPaginaMyAccount()` (comando que contém o `.should()`)
+   - ✅ **CORRETO:** `cy.verificarCampoSenhaMascarado()` (comando que contém a validação)
+3. **Nomes de comandos descritivos** — `cy.loginWithCredentials()` é melhor que `cy.login()`.
+4. **Assertions no final** — use `.should()`, `.expect()` para validar comportamento (mas DENTRO dos comandos).
+5. **Evitar hardcodes** — use variáveis, fixtures ou commands auxiliares para dados de teste.
+6. **Um cenário por arquivo** — facilita manutenção e rastreabilidade com documentação.
+7. **Timing realista** — use `cy.wait()` apenas quando necessário; prefira `cy.get(...).should('be.visible')`.
+
+## Estrutura de Specs: Regra de Ouro
+
+**Specs devem conter APENAS:**
+- Chamadas de comandos customizados
+- `describe()` e `it()` (framework)
+- `cy.wait()` em casos específicos de timing
+
+**Specs NUNCA devem conter:**
+- `.should()` / `.expect()`
+- `.get()` com seletores
+- `.type()` / `.click()` / `.select()`
+- Qualquer outra ação ou assertion inline
 
 ## Casos Especiais
 

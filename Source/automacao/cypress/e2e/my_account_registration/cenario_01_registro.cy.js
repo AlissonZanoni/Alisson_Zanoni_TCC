@@ -8,7 +8,7 @@ describe('My Account - Registro - Cenário 01: Criar conta', () => {
 
     // Passo 3 e 4: Preencher email (único) e senha
     cy.preencherEmailUnico()
-    cy.preencherSenhaRegistro('Senha@1234')
+    cy.preencherSenhaRegistro('Senha@123456789')
 
     // Passo 5: Clique em Registrar
     cy.clicarRegistrar()

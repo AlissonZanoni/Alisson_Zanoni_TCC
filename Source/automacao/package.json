@@ -9,7 +9,9 @@
     "test:headed": "cypress run --headed",
     "test:report": "cypress run --reporter junit",
     "test:report:headed": "cypress run --headed --reporter junit",
-    "test:dashboard": "cypress run --record"
+    "test:dashboard": "cypress run --record",
+    "test:video": "cypress run --video --reporter junit",
+    "test:evidence": "cypress run --headed --video --reporter junit"
   },
   "keywords": [
     "cypress",

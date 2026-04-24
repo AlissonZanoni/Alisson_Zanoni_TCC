@@ -47,6 +47,11 @@ import './my_account_account_details/cenario_02_validar_dados_pessoais'
 import './my_account_account_details/cenario_03_validar_email_invalido'
 import './my_account_account_details/cenario_04_erro_senhas_diferentes'
 import './my_account_account_details/cenario_05_senha_atual_necessaria'
+import './my_account_addresses/commands'
+import './my_account_addresses/cenario_01_validar_estrutura'
+import './my_account_addresses/cenario_02_editar_billing'
+import './my_account_addresses/cenario_03_editar_shipping'
+import './my_account_addresses/cenario_04_a_10_formulario'
 
 // Ignorar erros não capturados de scripts de terceiros (Google AdSense, Analytics, etc)
 Cypress.on('uncaught:exception', (err, runnable) => {

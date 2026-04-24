@@ -1,0 +1,111 @@
+# Cenários de Teste - My Account (Addresses)
+
+1. Validar estrutura da página de Addresses
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Addresses".
+   6. Verifique que a página contém duas seções: "Billing Address" e "Shipping Address".
+   7. Verifique que ambas as seções exibem a mensagem "You have not set up this type of address yet.".
+   8. Verifique que cada seção possui um botão "Edit".
+
+2. Validar navegação - Editar Billing Address
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Addresses".
+   6. Clique no botão "Edit" da seção "Billing Address".
+   7. Verifique que a página é redirecionada para "/my-account/edit-address/billing".
+
+3. Validar navegação - Editar Shipping Address
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Addresses".
+   6. Clique no botão "Edit" da seção "Shipping Address".
+   7. Verifique que a página é redirecionada para "/my-account/edit-address/shipping".
+
+4. Salvar Billing Address com sucesso (fluxo feliz)
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Addresses".
+   6. Clique no botão "Edit" da seção "Billing Address".
+   7. Preencha `billing_first_name` com "João".
+   8. Preencha `billing_last_name` com "Silva".
+   9. Preencha `billing_email` com um email válido (ex: registro_teste@example.com).
+   10. Preencha `billing_phone` com um telefone válido (ex: +5511999999999).
+   11. Selecione `billing_country` (ex: Brazil).
+   12. Preencha `billing_address_1` com "Rua Exemplo, 123".
+   13. Preencha `billing_city` com "Cidade Exemplo".
+   14. Selecione `billing_state` quando aplicável.
+   15. Preencha `billing_postcode` com "12345-678".
+   16. (Opcional) Preencha `billing_company` e `billing_address_2`.
+   17. Clique em "Save Address".
+   Resultado Esperado:
+   - Endereço salvo com sucesso; a aplicação exibe mensagem de confirmação e os valores aparecem atualizados na seção "Billing Address".
+
+5. Campos obrigatórios vazios (validações)
+   Passos:
+   1. Acesse a página de edição do Billing Address.
+   2. Limpe ou deixe em branco os campos obrigatórios: `billing_first_name`, `billing_last_name`, `billing_email`, `billing_phone`, `billing_address_1`, `billing_city`, `billing_state`, `billing_postcode`.
+   3. Clique em "Save Address".
+   Resultado Esperado:
+   - São exibidas mensagens de validação indicando os campos obrigatórios não preenchidos; o formulário não é submetido com sucesso.
+
+6. Email inválido
+   Passos:
+   1. Acesse a edição do Billing Address.
+   2. Preencha `billing_email` com um valor inválido (ex: "usuario@@dominio" ou "sem-arroba").
+   3. Preencha os demais campos obrigatórios com valores válidos.
+   4. Clique em "Save Address".
+   Resultado Esperado:
+   - O formulário mostra erro de formato de e-mail e não permite salvar.
+
+7. Telefone inválido
+   Passos:
+   1. Acesse a edição do Billing Address.
+   2. Preencha `billing_phone` com um valor claramente inválido (ex: "abc123" ou número muito curto).
+   3. Preencha os demais campos obrigatórios com valores válidos.
+   4. Clique em "Save Address".
+   Resultado Esperado:
+   - É exibida validação de telefone inválido e o endereço não é salvo.
+
+8. Troca de país atualiza lista de estados
+   Passos:
+   1. Acesse a edição do Billing Address.
+   2. Altere `billing_country` para um país que possui estados (ex: United States, India, Brazil).
+   3. Verifique que o controle `billing_state` é atualizado (lista disponível ou input apropriado).
+   4. Selecione um estado válido.
+   5. Clique em "Save Address".
+   Resultado Esperado:
+   - A lista de estados reflete o país selecionado; seleção é possível e o endereço pode ser salvo.
+
+9. Campos opcionais aceitos (Company, Address 2)
+   Passos:
+   1. Acesse a edição do Billing Address.
+   2. Preencha `billing_company` e `billing_address_2` com textos válidos além dos campos exigidos.
+   3. Clique em "Save Address".
+   Resultado Esperado:
+   - Campos opcionais são gravados e exibidos conforme esperado após a confirmação.
+
+10. Salvar sem alterações
+   Passos:
+   1. Acesse o formulário de edição sem alterar os valores existentes.
+   2. Clique em "Save Address".
+   Resultado Esperado:
+   - A aplicação responde de forma adequada (mensagem de confirmação ou ausência de erro) e os dados permanecem inalterados.
+
+Observações para automação (implementação Cypress):
+- Use seletores por id para campos (`#billing_first_name`, `#billing_email`, etc.).
+- Para selects customizados (select2), prefira interagir com o elemento `select` subjacente ou utilizar o fluxo de pesquisa do select2 via `cy.get('.select2-input')`.
+- Centralizar passos repetidos (login, abrir My Account, navegar para Addresses) em comandos customizados em `cypress/support/my_account/commands.js`.
+

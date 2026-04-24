@@ -11,12 +11,3 @@ Cypress.Commands.add('verificarRegistroSucesso', () => {
 Cypress.Commands.add('verificarTextoDashboard', (textoEsperado) => {
   cy.contains(textoEsperado).should('be.visible')
 })
-// Comando específico do cenário 01 - Criar conta
-Cypress.Commands.add('cenario_01_registro', () => {
-  cy.navigateToRegistrationPage()
-  cy.generateUniqueEmail().then((email) => {
-    const senha = 'Senha@1234'
-    cy.fillRegistrationForm(email, senha)
-    cy.verifyRegistrationSuccess()
-  })
-})

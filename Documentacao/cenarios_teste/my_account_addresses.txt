@@ -104,8 +104,69 @@
    Resultado Esperado:
    - A aplicação responde de forma adequada (mensagem de confirmação ou ausência de erro) e os dados permanecem inalterados.
 
+# ===================================
+# Cenários do Shipping Address (11-15)
+# ===================================
+
+11. Salvar Shipping Address com sucesso (fluxo feliz)
+   Passos:
+   1. Abra o navegador.
+   2. Insira a URL "http://practice.automationtesting.in/".
+   3. Clique no menu "My Account".
+   4. Faça login com credenciais válidas.
+   5. Clique no link "Addresses".
+   6. Clique no botão "Edit" da seção "Shipping Address".
+   7. Preencha `shipping_first_name` com "Maria".
+   8. Preencha `shipping_last_name` com "Santos".
+   9. Selecione `shipping_country` (ex: Brazil).
+   10. Preencha `shipping_address_1` com "Av Paulista, 1000".
+   11. Preencha `shipping_city` com "São Paulo".
+   12. Selecione `shipping_state` quando aplicável.
+   13. Preencha `shipping_postcode` com "01311100".
+   14. (Opcional) Preencha `shipping_company` e `shipping_address_2`.
+   15. Clique em "Save Address".
+   Resultado Esperado:
+   - Endereço salvo com sucesso; a aplicação exibe mensagem de confirmação e os valores aparecem atualizados na seção "Shipping Address".
+
+12. Campos obrigatórios vazios (validações) - Shipping
+   Passos:
+   1. Acesse a página de edição do Shipping Address.
+   2. Limpe ou deixe em branco os campos obrigatórios: `shipping_first_name`, `shipping_last_name`, `shipping_address_1`, `shipping_city`, `shipping_state`, `shipping_postcode`.
+   3. Clique em "Save Address".
+   Resultado Esperado:
+   - São exibidas mensagens de validação indicando os campos obrigatórios não preenchidos; o formulário não é submetido com sucesso.
+
+13. Troca de país atualiza lista de estados - Shipping
+   Passos:
+   1. Acesse a edição do Shipping Address.
+   2. Altere `shipping_country` para um país que possui estados (ex: United States, India, Australia).
+   3. Verifique que o controle `shipping_state` é atualizado (lista disponível ou input apropriado).
+   4. Selecione um estado válido.
+   5. Clique em "Save Address".
+   Resultado Esperado:
+   - A lista de estados reflete o país selecionado; seleção é possível e o endereço pode ser salvo.
+
+14. Campos opcionais aceitos (Company, Address 2) - Shipping
+   Passos:
+   1. Acesse a edição do Shipping Address.
+   2. Preencha `shipping_company` e `shipping_address_2` com textos válidos além dos campos exigidos.
+   3. Clique em "Save Address".
+   Resultado Esperado:
+   - Campos opcionais são gravados e exibidos conforme esperado após a confirmação.
+
+15. Salvar sem alterações - Shipping
+   Passos:
+   1. Acesse o formulário de edição do Shipping Address sem alterar os valores existentes.
+   2. Clique em "Save Address".
+   Resultado Esperado:
+   - A aplicação responde de forma adequada (mensagem de confirmação ou ausência de erro) e os dados permanecem inalterados.
+
 Observações para automação (implementação Cypress):
-- Use seletores por id para campos (`#billing_first_name`, `#billing_email`, etc.).
+- Use seletores por id para campos (`#billing_first_name`, `#shipping_first_name`, `#billing_email`, etc.).
 - Para selects customizados (select2), prefira interagir com o elemento `select` subjacente ou utilizar o fluxo de pesquisa do select2 via `cy.get('.select2-input')`.
-- Centralizar passos repetidos (login, abrir My Account, navegar para Addresses) em comandos customizados em `cypress/support/my_account/commands.js`.
+- Centralizar passos repetidos (login, abrir My Account, navegar para Addresses) em comandos customizados em `cypress/support/my_account_addresses/commands.js`.
+- Cenários 1-3: Aplicáveis a ambos (Billing e Shipping)
+- Cenários 4-10: Específicos de Billing Address
+- Cenários 11-15: Específicos de Shipping Address
+- NOTA: Shipping Address NÃO possui campos de email e phone (diferente de Billing)
 

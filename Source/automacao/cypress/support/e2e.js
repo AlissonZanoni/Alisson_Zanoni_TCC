@@ -51,7 +51,8 @@ import './my_account_addresses/commands'
 import './my_account_addresses/cenario_01_validar_estrutura'
 import './my_account_addresses/cenario_02_editar_billing'
 import './my_account_addresses/cenario_03_editar_shipping'
-import './my_account_addresses/cenario_04_a_10_formulario'
+import './my_account_addresses/cenario_04_a_10_billing_formulario'
+import './my_account_addresses/cenario_11_a_15_shipping_formulario'
 
 // Ignorar erros não capturados de scripts de terceiros (Google AdSense, Analytics, etc)
 Cypress.on('uncaught:exception', (err, runnable) => {

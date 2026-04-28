@@ -1,0 +1,126 @@
+# Cenários de Teste - Carrinho de Compras
+
+1. Adicionar um produto ao carrinho (fluxo feliz)
+   Passos:
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Clique no menu "Shop".
+   3. Localize um produto na listagem.
+   4. Clique no botão "ADD TO BASKET" do produto.
+   5. Navegue para a página do carrinho (clicando no ícone de carrinho ou acessando diretamente).
+   6. Verifique que o produto foi adicionado ao carrinho.
+   7. Valide que a quantidade do produto é 1.
+   8. Valide que o preço unitário está correto.
+   9. Valide que o total do item está correto.
+
+2. Validar estrutura da página do carrinho
+   Passos:
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Clique no menu "Shop".
+   3. Clique em "ADD TO BASKET" de um produto.
+   4. Navegue para a página do carrinho.
+   5. Verifique que a tabela contém coluna "Product".
+   6. Verifique que a tabela contém coluna "Price".
+   7. Verifique que a tabela contém coluna "Quantity".
+   8. Verifique que a tabela contém coluna "Total".
+   9. Verifique que existe a seção "Basket Totals" com "Subtotal", "Tax" e "Total".
+   10. Verifique que existem botões: "APPLY COUPON", "UPDATE BASKET" e "PROCEED TO CHECKOUT".
+
+3. Atualizar quantidade de um produto no carrinho
+   Passos:
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Clique no menu "Shop".
+   3. Clique em "ADD TO BASKET" de um produto.
+   4. Navegue para a página do carrinho.
+   5. Localize o campo de quantidade do produto.
+   6. Altere a quantidade de 1 para 3.
+   7. Clique no botão "UPDATE BASKET".
+   8. Verifique que a quantidade foi atualizada para 3.
+   9. Verifique que o total do item foi recalculado (preço unitário × 3).
+   10. Verifique que o subtotal, tax e total foram atualizados.
+
+4. Remover um produto do carrinho
+   Passos:
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Clique no menu "Shop".
+   3. Clique em "ADD TO BASKET" de um produto.
+   4. Navegue para a página do carrinho.
+   5. Localize o botão de remover produto (geralmente um ícone X ou link "Remove").
+   6. Clique no botão de remover.
+   7. Verifique que o produto foi removido do carrinho.
+   8. Verifique que o carrinho exibe mensagem "Carrinho vazio" ou similar.
+   9. Valide que subtotal, tax e total são zerados ou não aparecem.
+
+5. Validar cálculo do total final
+   Passos:
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Clique no menu "Shop".
+   3. Adicione um produto com preço ao carrinho.
+   4. Navegue para a página do carrinho.
+   5. Verifique que o Total é igual a Subtotal + Tax.
+
+6. Adicionar múltiplos produtos ao carrinho
+   Passos:
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Clique no menu "Shop".
+   3. Clique em "ADD TO BASKET" de um primeiro produto (ex: ₹450.00).
+   4. Clique em "ADD TO BASKET" de um segundo produto diferente (ex: ₹300.00).
+   5. Navegue para a página do carrinho.
+   6. Verifique que ambos os produtos estão listados.
+   7. Verifique o preço subtotal é a soma dos produtos.
+   8. Verifique que o Total Final está correto.
+
+7. Adicionar quantidade maior de um mesmo produto
+   Passos:
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Clique no menu "Shop".
+   3. Clique em "ADD TO BASKET" de um produto.
+   4. Clique novamente em "ADD TO BASKET" do mesmo produto.
+   5. Navegue para a página do carrinho.
+   6. Verifique que o produto aparece uma única vez com quantidade 2.
+   7. Valide que o total do item foi multiplicado por 2.
+
+8. Aplicar código de cupom inválido
+   Passos:
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Clique no menu "Shop".
+   3. Clique em "ADD TO BASKET" de um produto.
+   4. Navegue para a página do carrinho.
+   5. Localize o campo "Coupon code".
+   6. Insira um código de cupom inválido (ex: "CODIGOINVALIDO").
+   7. Clique no botão "APPLY COUPON".
+   8. Verifique que uma mensagem de erro é exibida (ex: "Coupon code not found").
+   9. Valide que o preço não foi alterado.
+
+9. Prosseguir para checkout com carrinho cheio
+   Passos:
+   1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+   2. Clique no menu "Shop".
+   3. Clique em "ADD TO BASKET" de um produto.
+   4. Navegue para a página do carrinho.
+   5. Clique no botão "PROCEED TO CHECKOUT".
+   6. Verifique que o usuário é redirecionado para a página de checkout.
+   7. Valide que os produtos do carrinho estão listados na página de checkout.
+
+10. Atualizar quantidade para zero e remover
+    Passos:
+    1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+    2. Clique no menu "Shop".
+    3. Clique em "ADD TO BASKET" de um produto.
+    4. Navegue para a página do carrinho.
+    5. Altere a quantidade de 1 para 0.
+    6. Clique no botão "UPDATE BASKET".
+    7. Verifique que o produto foi removido do carrinho.
+    8. Valide que o carrinho exibe mensagem "Carrinho vazio".
+
+11. Prosseguir para checkout logado
+    Passos:
+    1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+    2. Clique no menu "My Account".
+    3. Faça login com credenciais válidas (usuário: registro_1776123104744@example.com, senha: Senha@1234).
+    4. Verifique que o login foi realizado com sucesso.
+    5. Clique no menu "Shop".
+    6. Clique em "ADD TO BASKET" de um produto.
+    7. Navegue para a página do carrinho.
+    8. Clique no botão "PROCEED TO CHECKOUT".
+    9. Verifique que o usuário é redirecionado para a página de checkout.
+    10. Valide que os produtos do carrinho estão listados na página de checkout.

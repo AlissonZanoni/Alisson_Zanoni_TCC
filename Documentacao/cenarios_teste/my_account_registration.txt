@@ -47,7 +47,7 @@
    5. Resultado Esperado: o botão "Registrar" deve estar desabilitado (regra de negócio).
    6. Observação: Cenário de validação de bugfix - atualmente o botão fica habilitado quando deveria estar desabilitado com campos obrigatórios vazios.
 
-6. registro de senha muito fraca.
+6. Registro de senha muito fraca.
    Passos:
    1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    2. Clique no menu "My Account".
@@ -56,7 +56,7 @@
    5. Verifique o indicador de força da senha (classe `short` ou `bad`) e a mensagem "Very weak - Please enter a stronger password." or similar.
    6. Resultado Esperado: o sistema deve identificar a senha como muito fraca e não permitir registro (ou exibir validação clara).
 
-7. registro de senha fraca.
+7. Registro de senha fraca.
    Passos:
    1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    2. Clique no menu "My Account".
@@ -65,7 +65,7 @@
    5. Verifique o indicador de força da senha (classe `bad`) e a mensagem "Weak - Please enter a stronger password.".
    6. Resultado Esperado: o sistema deve identificar a senha como fraca; pode impedir o registro ou apresentar aviso de força insuficiente.
 
-8. registro de senha medio.
+8. Registro de senha medio.
    Passos:
    1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    2. Clique no menu "My Account".
@@ -74,7 +74,7 @@
    5. Verifique o indicador de força da senha (classe `good` ou mensagem "Medium").
    6. Resultado Esperado: o sistema deve aceitar a senha como média e permitir registro; pode sugerir melhorias.
 
-9. registro de senha forte.
+9. Registro de senha forte.
    Passos:
    1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    2. Clique no menu "My Account".

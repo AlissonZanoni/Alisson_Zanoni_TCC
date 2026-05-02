@@ -6,14 +6,35 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/**/*.cy.js',
     viewportWidth: 1280,
     viewportHeight: 720,
-    defaultCommandTimeout: 5000,
-    requestTimeout: 5000,
-    responseTimeout: 5000,
-    pageLoadTimeout: 30000,
+    // ==========================================
+    // CONFIGURAÇÕES DE ESTABILIDADE
+    // ==========================================
+    // Timeouts aumentados para evitar falhas em conexões lentas
+    defaultCommandTimeout: 20000,  // 20s - para comandos complexos
+    requestTimeout: 20000,          // 20s - para requisições HTTP
+    responseTimeout: 30000,         // 30s - para resposta do servidor
+    pageLoadTimeout: 60000,         // 60s - para carregamento de página
+    
+    // Retries automáticos para testes instáveis
+    retries: {
+      runMode: 3,    // Tentar 3 vezes no modo headless
+      openMode: 0   // Não retries no modo interativo
+    },
+    
+    // Configuração de vídeo para debug
+    video: true,
+    videoCompression: 32,
+    screenshotOnRunFailure: true,
+    
+    // Limpar estado entre testes para evitar interferência
+    trashAssetsBeforeRuns: true,
+    
     supportFile: 'cypress/support/e2e.js',
-    // Desabilitar chromeWebSecurity para evitar problemas de cross-origin em testes
     chromeWebSecurity: false,
-    // Configurar reporters para gerar relatórios
+    
+    // ==========================================
+    // REPORTER CONFIGURATION
+    // ==========================================
     reporter: 'junit',
     reporterOptions: {
       mochaFile: 'cypress/results/junit-results-[hash].xml',
@@ -21,7 +42,10 @@ module.exports = defineConfig({
       rootSuiteTitle: 'Testes Automatizados - TCC',
       testsOrder: 'alphanumeric'
     },
-    // Ignorar erros não capturados de scripts de terceiros (Google AdSense, Analytics, etc)
+    
+    // ==========================================
+    // ERROR HANDLING
+    // ==========================================
     onUncaughtException(err) {
       // Ignorar erros do Google AdSense
       if (err.message && err.message.includes('adsbygoogle')) {

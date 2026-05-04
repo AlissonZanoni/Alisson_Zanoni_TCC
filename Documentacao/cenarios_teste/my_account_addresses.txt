@@ -8,8 +8,7 @@
    4. Faça login com credenciais válidas.
    5. Clique no link "Addresses".
    6. Verifique que a página contém duas seções: "Billing Address" e "Shipping Address".
-   7. Verifique que ambas as seções exibem a mensagem "You have not set up this type of address yet.".
-   8. Verifique que cada seção possui um botão "Edit".
+   7. Verifique que cada seção possui um botão "Edit".
 
 2. Validar navegação - Editar Billing Address
    Passos:

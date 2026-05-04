@@ -124,3 +124,11 @@
     8. Clique no botão "PROCEED TO CHECKOUT".
     9. Verifique que o usuário é redirecionado para a página de checkout.
     10. Valide que os produtos do carrinho estão listados na página de checkout.
+
+12. Validar limite de produtos no carrinho
+   Passos:
+    1. Abra o navegador e insira a URL "http://practice.automationtesting.in/".
+    2. Clique no menu "Shop".
+    3. Clique em "ADD TO BASKET" em 4 produtos diferentes.
+    4. Acessar a pagina do carrinho
+    5. Verificar que só tem os últimos 3 produtos adicionados

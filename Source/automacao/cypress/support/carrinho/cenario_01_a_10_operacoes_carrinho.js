@@ -132,3 +132,16 @@ Cypress.Commands.add('validarRemocaoViaQuantidadeZero', () => {
   cy.wait(1000)
   cy.verificarCarrinhoVazio()
 })
+
+// Cenário 12: Validar limite máximo de produtos no carrinho (regra de negócio artificial)
+Cypress.Commands.add('validarLimiteMaximoProdutosCarrinho', (limiteMaximo = 3) => {
+  // Contar quantos produtos estão no carrinho
+  cy.get('table.shop_table tbody tr').then(($rows) => {
+    const quantidadeProdutos = $rows.length
+    
+    // Regra de negócio artificial: carrinho deve ter no máximo 3 produtos
+    // Este teste deve falhar pois o site não tem essa limitação
+    expect(quantidadeProdutos).to.be.at.most(limiteMaximo, 
+      `Carrinho deve ter no máximo ${limiteMaximo} produtos, mas tem ${quantidadeProdutos}`)
+  })
+})

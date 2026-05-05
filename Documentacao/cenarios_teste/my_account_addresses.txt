@@ -160,12 +160,3 @@
    Resultado Esperado:
    - A aplicação responde de forma adequada (mensagem de confirmação ou ausência de erro) e os dados permanecem inalterados.
 
-Observações para automação (implementação Cypress):
-- Use seletores por id para campos (`#billing_first_name`, `#shipping_first_name`, `#billing_email`, etc.).
-- Para selects customizados (select2), prefira interagir com o elemento `select` subjacente ou utilizar o fluxo de pesquisa do select2 via `cy.get('.select2-input')`.
-- Centralizar passos repetidos (login, abrir My Account, navegar para Addresses) em comandos customizados em `cypress/support/my_account_addresses/commands.js`.
-- Cenários 1-3: Aplicáveis a ambos (Billing e Shipping)
-- Cenários 4-10: Específicos de Billing Address
-- Cenários 11-15: Específicos de Shipping Address
-- NOTA: Shipping Address NÃO possui campos de email e phone (diferente de Billing)
-

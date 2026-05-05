@@ -18,7 +18,7 @@
    5. Clique no botão "Registrar".
    6. O registro deve falhar com uma mensagem de aviso (ex.: Você deve inserir um endereço de e-mail válido).
 
-3. Registro com endereço de e-mail vazio - Validar botão Register desabilitado (Bug-Tracking).
+3. Registro com endereço de e-mail vazio - Validar botão Register desabilitado.
    Passos:
    1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    2. Clique no menu "My Account".
@@ -26,9 +26,9 @@
    4. Deixe o campo de email vazio (não interagir).
    5. Verifique o estado do botão "Registrar" (Register).
    6. Resultado Esperado: o botão "Registrar" deve estar desabilitado (regra de negócio).
-   Observação: Cenário de validação de bugfix - atualmente o botão fica habilitado quando deveria estar desabilitado.
+   7. O cenário deve ser considerado falho se o botão estiver habilitado.
 
-4. Registro com senha vazia - Validar botão Register desabilitado (Bug-Tracking).
+4. Registro com senha vazia - Validar botão Register desabilitado.
    Passos:
    1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    2. Clique no menu "My Account".
@@ -36,16 +36,16 @@
    4. Deixe o campo de senha vazio (não interagir).
    5. Verifique o estado do botão "Registrar" (Register).
    6. Resultado Esperado: o botão "Registrar" deve estar desabilitado (regra de negócio).
-   Observação: Cenário de validação de bugfix - atualmente o botão fica habilitado quando deveria estar desabilitado.
+   7. O cenário deve ser considerado falho se o botão estiver habilitado.
 
-5. Registro com email e senha vazios - Validar botão Register desabilitado (Bug-Tracking).
+5. Registro com email e senha vazios - Validar botão Register desabilitado.
    Passos:
    1. Abra o navegador e insira a url "http://practice.automationtesting.in/".
    2. Clique no menu "My Account".
    3. Não interagir com nenhum campo (email e senha vazios).
    4. Verifique o estado do botão "Registrar" (Register) ao abrir a página.
    5. Resultado Esperado: o botão "Registrar" deve estar desabilitado (regra de negócio).
-   6. Observação: Cenário de validação de bugfix - atualmente o botão fica habilitado quando deveria estar desabilitado com campos obrigatórios vazios.
+   6. O cenário deve ser considerado falho se o botão estiver habilitado com campos obrigatórios vazios.
 
 6. Registro de senha muito fraca.
    Passos:

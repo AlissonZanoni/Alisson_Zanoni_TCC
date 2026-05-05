@@ -68,10 +68,12 @@
    6. Agora clique no botão de login.
    7. O login deve falhar, exibindo uma mensagem de nome de usuário/senha incorretos.
 
-8. Login - Checkbox Remember me.
+8. Login - Checkbox Remember me marcado por padrão.
    Passos:
    1. Abra o navegador.
    2. Insira a url "http://practice.automationtesting.in/".
    3. Clique no menu "My Account".
    4. Verifique se o checkbox "Remember me" está visível na página de login.
    5. O checkbox com label "Remember me" deve estar presente e disponível para o usuário interagir.
+   6. Verifique se o checkbox "Remember me" inicia marcado por padrão.
+   7. O cenário deve ser considerado falho caso o checkbox inicie desmarcado.

@@ -7,38 +7,37 @@ Este projeto contém testes automatizados com Cypress para validar cenários de 
 ```
 automacao/
 ├── cypress/
-│   ├── e2e/                              # Testes end-to-end
-│   │   ├── home_page/                    # Testes de Home Page
-│   │   │   ├── cenario_01_tres_sliders.cy.js
-│   │   │   ├── cenario_02_arrivals.cy.js
-│   │   │   └── ... mais cenários
-│   │   ├── my_account_login/             # Testes de Login
-│   │   │   ├── cenario_01_login.cy.js
-│   │   │   └── ... mais cenários
-│   │   ├── my_account_registration/      # Testes de Registro
-│   │   │   ├── cenario_01_registro.cy.js
-│   │   │   └── ... mais cenários
-│   │   ├── my_account/                   # Testes da Área Logada
-│   │   │   ├── cenario_01_dashboard.cy.js
-│   │   │   └── ... mais cenários
-│   │   ├── shop/                         # Testes da Loja
-│   │   │   ├── cenario_01_filtrar_preco.cy.js
-│   │   │   └── ... mais cenários
-│   │   └── support/                      # Arquivos de suporte
-│   │       ├── home_page/                # Comandos da Home Page
-│   │       │   └── commands.js
-│   │       ├── my_account_login/         # Comandos de Login
-│   │       │   └── commands.js
-│   │       ├── my_account_registration/  # Comandos de Registro
-│   │       │   └── commands.js
-│   │       ├── my_account/               # Comandos da Área Logada
-│   │       │   └── commands.js
-│   │       ├── shop/                     # Comandos da Loja
-│   │       │   └── commands.js
-│   │       └── e2e.js                    # Configuração global
-│   └── cypress.config.js                 # Configuração do Cypress
-├── package.json                          # Dependências do projeto
-├── README.md                             # Este arquivo
+│   ├── e2e/                                    # Testes end-to-end
+│   │   ├── home_page/                          # Testes de Home Page (5 cenários)
+│   │   ├── shop/                               # Testes da Loja (11 cenários)
+│   │   ├── carrinho/                           # Testes do Carrinho (12 cenários)
+│   │   ├── my_account_login/                   # Testes de Login (8 cenários)
+│   │   ├── my_account_registration/            # Testes de Registro (9 cenários)
+│   │   ├── my_account/                         # Testes da Área Logada (5 cenários)
+│   │   ├── my_account_account_details/         # Testes de Detalhes da Conta (5 cenários)
+│   │   └── my_account_addresses/               # Testes de Endereços (15 cenários)
+│   └── support/                                # Arquivos de suporte
+│       ├── home_page/                          # Comandos da Home Page
+│       │   └── commands.js
+│       ├── shop/                               # Comandos da Loja
+│       │   └── commands.js
+│       ├── carrinho/                           # Comandos do Carrinho
+│       │   └── commands.js
+│       ├── my_account_login/                   # Comandos de Login
+│       │   └── commands.js
+│       ├── my_account_registration/            # Comandos de Registro
+│       │   └── commands.js
+│       ├── my_account/                         # Comandos da Área Logada
+│       │   └── commands.js
+│       ├── my_account_account_details/         # Comandos de Detalhes da Conta
+│       │   └── commands.js
+│       ├── my_account_addresses/               # Comandos de Endereços
+│       │   └── commands.js
+│       ├── commands.js                         # Comandos globais
+│       └── e2e.js                              # Configuração global
+├── cypress.config.js                           # Configuração do Cypress
+├── package.json                                # Dependências do projeto
+└── README.md                                   # Este arquivo
 ```
 
 ## Instalação

@@ -1,422 +1,306 @@
-TESTES DE SOFTWARE: OS BENEFÍCIOS DA IMPLEMENTAÇÃO DE
-TESTES AUTOMATIZADOS.
-Alisson Zanoni Cesario da Silva1, Matheus Leandro Ferreira2
-1 INTRODUÇÃO
-A crescente demanda por softwares de qualidade tem impulsio-
-nado a adoção de processos robustos de validação, tornando a identifica-
-ção precoce de falhas e defeitos uma etapa essencial. Detectar problemas
-nas fases iniciais do desenvolvimento contribui para a redução de custos
-com manutenção e aumenta a confiabilidade do sistema. Nesse contexto,
-os testes de software assumem um papel fundamental, assegurando que
-o produto final atenda às especificações e funcione corretamente em dife-
-rentes condições de uso. Essa perspectiva é destacada em estudo recente
-publicado pela revista científica Núcleo do Conhecimento (Silva, 2019)
-A automação de testes surge como um elemento facilitador, re-
-duzindo o tempo necessário para produção e manutenção. Ao automatizar
-a execução de testes, as equipes de desenvolvimento podem obter feed-
-back mais rápido, aprimorar a cobertura de testes e mitigar riscos associa-
-dos a falhas críticas. No entanto, um dos desafios enfrentados na adoção
-da automação está relacionado às expectativas iniciais sobre seu impacto
-nos custos de implantação e manutenção. Embora seja possível automati-
-zar diversos aspectos do processo de teste, é necessário um planejamento
-estratégico para definir quais testes são mais vantajosos para automação,
-evitando desperdício de recursos (Silva, 2019)
-O objetivo principal do teste de software é demonstrar que o pro-
-grama executa corretamente suas funções designadas, além de identificar
-possíveis defeitos antes que o sistema seja disponibilizado para uso. Con-
-siderando os modelos modernos de desenvolvimento, a antecipação dos
-testes para as fases iniciais do ciclo de vida do software é uma aborda-
-gem essencial para reduzir custos e aprimorar a qualidade do produto final
-(Sommerville, 2011).
-Da mesma forma, destaca que os testes podem ser interpreta-
-1Curso de Ciência da Computação, Universidade do Extremo Sul Catarinense (Unesc),
-alisson.zanonii@gmail.com
-2Curso de Ciência da Computação, Universidade do Extremo Sul Catarinense (Unesc),
-mlf@unesc.net
-dos de maneira intuitiva ou formal, sendo indispensável a verificação do
-comportamento do sistema por meio de execuções controladas para ga-
-rantir sua conformidade com os requisitos estabelecidos (Pressman, 2011).
-A integração contínua de testes durante o desenvolvimento é
-crucial para evitar que falhas cheguem ao usuário final. Além de detec-
-tar bugs, os testes têm um papel preventivo, garantindo que os erros sejam
-corrigidos antes mesmo de se tornarem problemas críticos. O processo de
-teste envolve tanto abordagens manuais quanto automatizadas. No teste
-manual, os analistas executam o software com diferentes conjuntos de da-
-dos para verificar se os resultados correspondem ao esperado. Já no teste
-automatizado, os cenários de teste são codificados e executados repetida-
-mente conforme o sistema evolui, proporcionando maior eficiência e confi-
-abilidade (Sommerville, 2011).
-Tendo em vista os desafios enfrentados na área de desenvol-
-vimento de software, este estudo tem como objetivo comparar a eficiên-
-cia entre testes manuais e automatizados no desenvolvimento de software,
-com base em métricas de tempo, precisão e identificação de falhas. Serão
-abordados conceitos fundamentais, técnicas e critérios para verificação e
-validação de produtos, bem como uma ilustração prática do funcionamento
-dos testes automatizados. Ao compreender esses aspectos, busca-se de-
-monstrar como a automação pode aprimorar a qualidade dos sistemas,
-tornando-os mais robustos, confiáveis e preparados para atender às exi-
-gências do mercado.
-1.1 OBJETIVO GERAL
-Comparar a eficiência entre testes manuais e automatizados no
-desenvolvimento de software, com base em métricas de tempo, precisão e
-identificação de falhas.
-1.2 OBJETIVOS ESPECÍFICOS
-Os objetivos específicos desta pesquisa consistem em:
-• Compreender a importância da aplicação de testes automatizados no
-desenvolvimento de software, destacando sua contribuição para a re-
-dução de esforço, retrabalho e falhas;
-• Comparar o tempo de execução entre testes manuais e automatiza-
-dos;
-• Avaliar a relevância dos testes automatizados nos processos de de-
-2
-senvolvimento moderno, considerando sua influência na redução de
-defeitos e na melhoria da qualidade do produto;
-• Analisar o uso de ferramentas de automação de testes, como Cy-
-press, Selenium e Robot-framework, identificando vantagens e limita-
-ções;
-• Propor um modelo de integração de testes automatizados no ciclo de
-desenvolvimento ágil, com base em práticas de DevOps.
-1.3 JUSTIFICATIVA
-Com o avanço das linguagens de programação, frameworks e
-bibliotecas comerciais, o desenvolvimento de software tornou-se mais ágil
-e acessível, permitindo a entrega de aplicações em prazos reduzidos. Essa
-evolução trouxe maior flexibilidade aos processos de desenvolvimento, tornando-
-os mais dinâmicos e adaptáveis às necessidades do mercado (Souza et al.,
-2023).
-No entanto, essa flexibilidade também apresenta desafios em re-
-lação à qualidade do software. A rápida iteração e evolução dos sistemas
-podem resultar em falhas inesperadas e comportamentos indesejados, tor-
-nando a validação um processo essencial. Nesse contexto, garantir a con-
-fiabilidade das aplicações, especialmente em plataformas web e mobile,
-tornou-se uma prioridade para as equipes de desenvolvimento (Souza et
-al., 2023).
-A automação de testes surge como uma solução eficaz para
-esse desafio, permitindo a validação contínua das funcionalidades do sis-
-tema de forma rápida e eficiente. O uso de ferramentas automatizadas re-
-duz significativamente o tempo gasto com testes manuais, garantindo maior
-precisão e abrangência na detecção de falhas (Gandini; Salvatores, 2002).
-1.4 ESTRUTURA DO TRABALHO
-No capítulo inicial, tem-se a introdução, na qual são apresen-
-tados o tema da pesquisa, seus objetivos, a justificativa e a organização
-geral do trabalho. Em seguida, no capítulo de Fundamentação Teórica,
-abordam-se os principais conceitos relacionados aos testes de software e
-à automação, fornecendo o embasamento necessário para a discussão. O
-terceiro capítulo trata dos Trabalhos Correlatos, reunindo estudos e projetos
-anteriores que discutem temas semelhantes, com a finalidade de destacar
-contribuições relevantes e possíveis lacunas na literatura. O capítulo se-
-guinte descreve o Trabalho Proposto, apresentando os objetivos específicos
-3
-da pesquisa, bem como o escopo da solução desenvolvida. A Metodologia
-é detalhada no capítulo subsequente, explicando os métodos empregados,
-as ferramentas utilizadas e os critérios adotados para condução do estudo.
-Na sequência, são apresentados os Recursos Necessários, com a descri-
-ção dos elementos técnicos e operacionais indispensáveis para a execução
-do projeto. Por fim, o Cronograma delimita as etapas previstas e o planeja-
-mento temporal do desenvolvimento do trabalho.
-2 FUNDAMENTAÇÃO TEÓRICA
-2.1 Qualidade de Software e Garantia da Qualidade (QA)
-A qualidade de um sistema de software está diretamente relaci-
-onada à forma como ele é projetado, implementado e testado. De acordo
-com Sommerville (2011), assegurar que o sistema atenda aos seus requisi-
-tos funcionais e não funcionais é o principal objetivo dos testes de software,
-sendo esse um processo essencial para garantir confiabilidade e robustez
-no produto final. A verificação de qualidade deve ocorrer ao longo de todo o
-ciclo de vida do software, desde a concepção até a entrega, e não apenas
-na fase final de desenvolvimento.
-A Garantia da Qualidade (QA), por sua vez, representa um con-
-junto mais amplo de práticas e políticas organizadas para prevenir falhas e
-garantir que os processos de desenvolvimento sigam padrões consistentes.
-Pressman (2011) destaca que QA envolve atividades de auditoria, revisão
-e controle, funcionando como um mecanismo de suporte à engenharia de
-software, enquanto os testes atuam diretamente na validação prática do
-comportamento do sistema. Nesse contexto, QA não se limita à execu-
-ção de testes, mas à criação de uma cultura de qualidade em todo o time
-técnico.
-Portanto, entender a diferença entre QA e testes de software per-
-mite posicionar corretamente a importância da automação no cenário atual.
-Enquanto a QA estabelece um ambiente favorável à qualidade, os testes —
-sejam manuais ou automatizados — operam como ferramentas essenciais
-para verificação objetiva. Essa distinção ajuda a compreender por que a au-
-tomação de testes vem ganhando espaço como prática fundamental para
-garantir que softwares modernos atendam às expectativas do mercado.
-2.2 Tipos de Testes de Software
-Os testes de software podem ser classificados conforme o nível
-em que são aplicados durante o ciclo de desenvolvimento. Os principais
-4
-níveis são: teste de unidade, que verifica o comportamento de funções
-ou métodos isolados; teste de integração, que avalia a comunicação entre
-módulos; teste de sistema, que valida o sistema como um todo; e teste
-de aceitação, que assegura que o sistema atende aos requisitos do usuário
-final Sommerville (2011). Essa divisão em níveis permite detectar falhas em
-diferentes estágios, promovendo uma abordagem preventiva e facilitando a
-manutenção contínua do sistema.
-Além dessa classificação por nível, há também a distinção entre
-testes funcionais e não funcionais. Testes funcionais verificam se o sistema
-executa corretamente suas funções esperadas. Já os testes não funcio-
-nais avaliam atributos como desempenho, segurança, usabilidade e esca-
-labilidade. Ambos são essenciais para garantir o bom funcionamento do
-software em contextos variados (Myers, 2012).
-Em projetos ágeis, o entendimento correto sobre os tipos de
-teste auxilia na decisão sobre quais deles devem ser priorizados para auto-
-mação. De acordo com Gandini e Salvatores (2002), testes de regressão,
-testes unitários e de integração são os mais indicados para automação,
-devido à sua repetibilidade e estabilidade.
-2.3 Testes Manuais
-Testes manuais envolvem a execução direta dos cenários por um
-analista, que interage com a aplicação e verifica se os comportamentos es-
-tão de acordo com o esperado. Essa abordagem é especialmente útil para
-testes exploratórios e de usabilidade, que requerem observações subjetivas
-e julgamento humano (Pressman, 2011).
-Apesar de sua flexibilidade, os testes manuais possuem limita-
-ções importantes, como o custo elevado de tempo e o risco de inconsis-
-tência devido à fadiga dos profissionais. Em ambientes com entregas con-
-tínuas, essas limitações se tornam mais evidentes, dificultando a detecção
-rápida de regressões (Gandini; Salvatores, 2002).
-Ainda assim, testes manuais continuam relevantes em cenários
-que envolvem avaliação visual, validação de conteúdo dinâmico e experiên-
-cias de usuário. O ideal, portanto, é a combinação de testes manuais com
-testes automatizados, adotando uma abordagem híbrida (Crispin; Gregory,
-2009).
-5
-2.4 Testes Automatizados
-Os testes automatizados consistem na criação de scripts que
-executam casos de teste de forma programada, sem necessidade de in-
-tervenção humana. Esses testes são especialmente úteis em cenários re-
-petitivos e de validação contínua, como testes de regressão. De acordo
-com Sommerville (2011), a automação reduz erros humanos, aumenta a
-padronização dos testes e proporciona respostas mais rápidas no ciclo de
-desenvolvimento.
-Além disso, ferramentas como Selenium, Cypress e Robot Fra-
-mework oferecem recursos poderosos para simular interações complexas,
-validar interfaces web e gerar relatórios detalhados sobre falhas detectadas.
-Conforme (Souza et al., 2023)
-Contudo, a automação exige planejamento. Nem todos os cená-
-rios são vantajosos para automatizar, principalmente aqueles que envolvem
-interpretação visual, mudanças constantes ou avaliação subjetiva. Nesses
-casos, o esforço de manutenção pode superar os benefícios Gandini e Sal-
-vatores (2002). Assim, é fundamental selecionar cuidadosamente os testes
-a serem automatizados com base no retorno esperado.
-2.5 Contribuição da Automação para Qualidade de Produto
-A automação contribui significativamente para a qualidade do
-software ao permitir a detecção precoce de defeitos, reduzir o retrabalho e
-promover maior confiança nas entregas. Estudos como o de Matos (2020)
-mostram que versões de um sistema com testes automatizados apresenta-
-ram melhorias em estabilidade, tempo de resposta e aceitação do usuário
-final.
-Além disso, a automação facilita a manutenção e a escalabili-
-dade do sistema. Desenvolvedores podem implementar mudanças com
-maior segurança, confiando que os testes automatizados identificarão pos-
-síveis impactos em funcionalidades já existentes. Essa prática é compatí-
-vel com metodologias como Desenvolvimento Orientado a Testes (TDD) e
-Entrega Contínua (CD), que valorizam a validação contínua durante o pro-
-cesso de desenvolvimento (Crispin; Gregory, 2009).
-Outro ponto importante é a geração de métricas objetivas, como
-cobertura de testes, tempo médio de execução e taxa de falhas. Esses in-
-dicadores ajudam as equipes técnicas a monitorar a evolução da qualidade
-do sistema e tomar decisões baseadas em dados. Quando bem aplicada,
-a automação não só reduz custos, mas também melhora a competitividade
-6
-dos produtos no mercado (Souza et al., 2023).
-3 TRABALHOS CORRELATOS
-3.1 Comparativo entre Ferramentas de Automação
-Diversos trabalhos acadêmicos têm explorado os benefícios da
-automação de testes de software, fornecendo uma base sólida para a dis-
-cussão apresentada neste trabalho. Um exemplo disso é o estudo de Tei-
-xeira (2022), desenvolvido na Universidade Federal de Santa Maria (UFSM),
-que realizou uma análise comparativa entre as ferramentas Capybara e Cy-
-press. O trabalho teve como objetivo identificar as vantagens e desvanta-
-gens de cada ferramenta no contexto da automação de testes. A autora
-conduziu testes em diferentes cenários, comparando aspectos como confi-
-guração, estruturação, linhas de código, depuração e tempo de execução.
-Como resultado, o Cypress demonstrou superioridade em vários desses
-aspectos, especialmente em termos de agilidade e facilidade de uso, en-
-quanto o Capybara mostrou menor complexidade no número de linhas de
-código escritas.
-Outro estudo relevante foi conduzido por Soares (2022), na Uni-
-versidade Federal do Rio Grande do Norte (UFRN), que comparou as fer-
-ramentas Cypress e Selenium no contexto de testes de ponta a ponta em
-aplicações web. A pesquisa adotou uma abordagem documental e explora-
-tória, focando nas características técnicas, vantagens e limitações de cada
-solução. O autor concluiu que o Cypress, por ser uma ferramenta mais
-moderna, apresentou benefícios significativos em termos de performance e
-facilidade de integração com outras tecnologias, superando o Selenium em
-diversos aspectos práticos.
-Na Universidade Federal Rural de Pernambuco (UFRPE), Farias
-(2024) desenvolveu uma pesquisa com o intuito de comparar as ferramen-
-tas Selenium WebDriver, Cypress e Playwright, aplicando-as a ambientes
-reais de aplicações web. O estudo seguiu uma metodologia exploratória
-e descritiva, combinando análises qualitativas e quantitativas. A pesquisa
-concluiu que o Playwright ofereceu o melhor conjunto de recursos e de-
-sempenho, destacando-se como uma ferramenta promissora para testes
-automatizados de ponta a ponta, embora as outras ferramentas também
-apresentassem resultados satisfatórios dependendo do contexto de uso.
-7
-3.2 Automação Integrada ao Processo de Desenvolvimento
-Ainda no contexto acadêmico, destaca-se o trabalho de Matos
-(2020), da Universidade Federal de Santa Catarina (UFSC), que apresen-
-tou um estudo de caso do aplicativo e-SUS AB Atividade Coletiva, anali-
-sando os efeitos da utilização de testes automatizados em um ambiente
-com integração contínua. O autor comparou duas versões do aplicativo,
-sendo uma com testes automatizados e outra sem, avaliando métricas como
-estabilidade, tempo de inicialização e feedback dos usuários. Os resulta-
-dos evidenciaram melhorias consideráveis na versão com testes automati-
-zados, indicando que a prática contribuiu diretamente para o aumento da
-qualidade percebida pelos usuários e para a eficiência no ciclo de desen-
-volvimento.
-3.3 Uso de Inteligência Artificial em Testes Automatizados
-Um estudo internacional recente que também merece destaque
-é o de Ferreira et al. (2025), que investigou a aplicação de modelos de lin-
-guagem de grande escala (LLMs) no processo de geração automatizada de
-testes de aceitação para aplicações web. O trabalho foi desenvolvido em
-parceria com uma empresa do setor industrial, em um ambiente real de de-
-senvolvimento. Os autores propuseram uma abordagem em duas etapas:
-primeiro, utilizando a ferramenta AutoUAT para gerar cenários de aceitação
-em linguagem natural (no formato Gherkin), e em seguida, aplicando a fer-
-ramenta Test Flow para converter esses cenários em testes automatizados
-com a ferramenta Cypress. A pesquisa revelou resultados promissores —
-95% dos cenários gerados foram considerados úteis, e 92% dos testes exe-
-cutáveis foram aproveitáveis, sendo a maioria deles utilizável com pouca
-ou nenhuma modificação. Os autores concluíram que, com o suporte de
-ferramentas apropriadas e supervisão adequada, os LLMs podem ser inte-
-grados com sucesso ao processo de automação de testes, aumentando a
-eficiência na criação de testes de aceitação e contribuindo para a cobertura
-de requisitos anteriormente negligenciados.
-3.4 Estudos de Caso com Ferramentas de Automação
-Por fim, (Lima, 2017), da Universidade Federal do Ceará (UFC),
-investigou a aplicação de testes funcionais automatizados em sistemas web
-utilizando a ferramenta Selenium. O estudo foi realizado como um estudo
-de caso no Laboratório de Sistemas e Bancos de Dados da instituição. A
-pesquisa implementou um processo estruturado de testes baseado no mo-
-8
-delo MPT-Br, permitindo a avaliação da eficácia da automação no ambiente
-real. A conclusão apontou que a automação contribuiu para maior agilidade
-na execução dos testes e aumento na detecção de falhas, resultando em
-melhorias significativas na qualidade do software desenvolvido.
-4 TRABALHO PROPOSTO
-Inicialmente, será elaborado um plano de testes contendo apro-
-ximadamente 30 cenários de teste, incluindo tanto casos bem-sucedidos
-quanto casos com falhas intencionais (bugs). O plano será entregue a três
-profissionais de QA com diferentes níveis de senioridade (júnior, pleno e
-sênior), que executarão os testes manualmente.
-Durante a execução dos testes, serão coletados dados sobre:
-• Tempo gasto na execução de cada cenário.
-• Precisão na identificação correta dos resultados esperados.
-• Capacidade de detecção de bugs inseridos nos cenários.
-• Qualidade dos relatórios de teste, considerando a clareza, nível de
-detalhe e evidências apresentadas (capturas de tela, logs, descrições
-de falhas).
-Paralelamente, será desenvolvida uma automação para a execu-
-ção dos mesmos 30 cenários, utilizando ferramentas específicas de testes
-automatizados. A automação permitirá medir:
-• Tempo de execução total.
-• Precisão na identificação de bugs e falhas esperadas.
-• Comparação entre o tempo e a eficácia dos testes manuais e auto-
-matizados.
-A pesquisa contará com três analistas de qualidade de software,
-que executarão os testes manuais. A automação será executada com os
-mesmos cenários para comparação direta dos resultados.
-Os dados coletados serão analisados comparativamente, verifi-
-cando:
-• Desempenho dos profissionais em relação ao tempo e precisão dos
-testes.
-9
-• Eficiência da automação em termos de tempo de execução e cober-
-tura de falhas.
-• Diferença na identificação de bugs entre os testes manuais e automa-
-tizados.
-Essa abordagem permitirá avaliar se a automação consegue su-
-perar ou complementar a análise manual, destacando os benefícios e limi-
-tações de cada método no processo de garantia da qualidade do software.
-4.1 METODOLOGIA
-A metodologia deste estudo busca avaliar a eficiência e precisão
-dos testes automatizados em comparação aos testes manuais, conside-
-rando o desempenho de profissionais de diferentes níveis de senioridade
-na área de Qualidade de Software (QA).
-A pesquisa será quantitativa e experimental, pois coletará da-
-dos mensuráveis sobre tempo e precisão na execução de testes manuais e
-automatizados.
-4.2 RECURSOS NECESSÁRIOS
-1. Hardware
-• Memória RAM: 8GB ou mais.
-• Armazenamento: 256GB SSD / HDD ou mais.
-• Processador: Intel Core i5-4460 @ 3.20GHz ou equivalente.
-• Sistema Operacional: Windows 10 Pro x64 ou Windows 11 Pro
-• Monitor: Resolução 1920 x 1080
-• Periféricos: Teclado, mouse, fones de ouvido.
-2. Software
-• Visual Studio Code (IDE)
-• GitHub Desktop
-• Jenkins
-• Gravador de tela desktop
-10
-4.3 CRONOGRAMA
-Tabela 1 – Cronograma do projeto de pesquisa
-Cronograma de Trabalho de Conclusão de Curso
-2º Semestre 2025
-Etapas Ago Set Out Nov Dez
-Seleção do sistema utilizado no desenvol-
-vimento da automação
-X
-Seleção dos profissionais de QA para
-amostra (Júnior, Pleno e Sênior)
-X
-Elaboração do plano de testes (30 cená-
-rios)
-X
-Execução dos testes manuais pelos QAS
-(Júnior, Pleno e Sênior)
-X X
-Coleta e análise dos dados dos testes ma-
-nuais
-X X
-Desenvolvimento da automação dos testes X X X
-Testes da automação desenvolvida X X X
-Execução dos testes automatizados X
-Coleta e análise dos dados dos testes au-
-tomatizados
-X
-Comparação entre os resultados dos tes-
-tes manuais e automatizados
-X
-Redação TCC Final X X X X X
-Elaboração da apresentação para defesa
-pública
-X X
-Fonte: Do autor.
-REFERÊNCIAS
-CRISPIN, L.; GREGORY, J. Agile Testing: A Practical Guide for Testers
-and Agile Teams. [S.l.]: Addison-Wesley Professional, 2009. ISBN
-9780321534460.
-FARIAS, G. C. d. Análise comparativa de ferramentas de testes
-automatizados de ponta a ponta em ambientes de aplicações
-web. Tese (bachelorThesis) — Brasil, mar. 2024. Disponível em:
-<http://repository.ufrpe.br/handle/123456789/5850>.
-FERREIRA, M. et al. Acceptance Test Generation with Large Language
-Models: An Industrial Case Study. 2025. Accessed: 2025-05-05.
-Disponível em: <https://arxiv.org/abs/2504.07244>.
-GANDINI, A.; SALVATORES, M. The Physics of Subcritical Multiplying
-Systems. [S.l.]: Taylor Francis, 2002. v. 39. 673-686 p.
-11
-LIMA, R. Testes funcionais automatizados com Selenium em sistemas
-web: Um estudo de caso. 2017. Trabalho de Conclusão de Curso.
-Disponível em: <http://repositorio.ufc.br/handle/riufc/25003>.
-MATOS, L. Automação de testes em ambientes com integração
-contínua: Estudo de caso no aplicativo e-SUS AB Atividade
-Coletiva. 2020. Trabalho de Conclusão de Curso. Disponível em:
-<https://repositorio.ufsc.br/handle/123456789/202446>.
-MYERS, G. J. The Art of Software Testing. 3. ed. [S.l.]: Wiley, 2012. ISBN
-9781118031964.
-PRESSMAN, R. S. Engenharia De Software. [S.l.]: AMGH; 7ª edição,
-2011. 780 p.
-SILVA, M. L. M. d. Uma visão geral sobre automação de testes. 2019,
-v. 01, n. 12, p. 117–130.
-SOARES, A. F. Comparativo entre ferramentas de testes de softwares
-E2E em sistemas web. 2022.
-SOMMERVILLE, I. Engenharia de software. [S.l.]: Editora Pearson, 2011.
-548 p.
-SOUZA, G. G. d. et al. AUTOMAÇÃO DE TESTES: uma abordagem
-comparativa entre ferramentas. 2023, v. 20, n. 2, p. 100–111. ISSN
-2447-0864.
-TEIXEIRA, E. Análise de ferramentas de automação de testes de
-software. 2022.
-12
+%==========================================================================
+% Artigo Científico UNESC - Versão Final Ajustada
+%==========================================================================
+\documentclass{UNESC}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+\usepackage[brazilian]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{quoting}
+\usepackage[labelsep=none]{caption}
+
+\DeclareCaptionLabelFormat{figuracomtraco}{#1~#2 -}
+\captionsetup[figure]{labelformat=figuracomtraco, labelsep=space}
+\captionsetup[table]{labelformat=simple, labelsep=space, textformat=simple}
+\DeclareCaptionLabelFormat{tabelacomtraco}{#1~#2 -}
+\captionsetup[table]{labelformat=tabelacomtraco}
+\captionsetup{labelsep=none}
+
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{comment}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{array}
+\usepackage{tabularx}
+
+\hypersetup{
+  setpagesize  = false,
+  colorlinks   = true,    % Colours links instead of ugly boxes
+  urlcolor     = blue,    % Colour for external hyperlinks
+  linkcolor    = black,   % Colour of internal links
+  citecolor    = black    % Colour of citations
+}
+\urlstyle{same}
+\usepackage{setspace}
+\usepackage[alf,recuo=0.0cm,abnt-emphasize=bf]{abntex2cite} 
+
+%==========================================================================
+% Dados do artigo: título, autores e filiação atualizados conforme modelo
+%==========================================================================
+\title{TESTES DE SOFTWARE: OS BENEFÍCIOS DA IMPLEMENTAÇÃO DE TESTES AUTOMATIZADOS}
+\author
+{
+ Alisson Zanoni Cesario da Silva\footnote{Curso de Ciência da Computação, Universidade do Extremo Sul Catarinense (Unesc), Criciúma - Santa Catarina - Brasil. alisson.zanonii@gmail.com},
+ Matheus Leandro Ferreira\footnote{Orientador. Curso de Ciência da Computação, Universidade do Extremo Sul Catarinense (Unesc), Criciúma - Santa Catarina - Brasil. mlf@unesc.net}
+}
+
+%==========================================================================
+% Início do texto do artigo
+%==========================================================================
+\begin{document}
+
+\onehalfspacing
+\maketitle
+
+\noindent
+\textbf{Resumo:} A crescente demanda por softwares de alta qualidade tem impulsionado a adoção de processos rigorosos de validação, tornando os testes de software uma etapa indispensável no ciclo de desenvolvimento. Este trabalho tem como objetivo comparar a eficiência entre testes manuais e automatizados, com base em métricas de tempo de execução, precisão na identificação de falhas. Para isso, foram elaborados 70 cenários de teste aplicados à plataforma web Practice Automation Testing, os quais foram executados manualmente por três profissionais de Quality Assurance com diferentes níveis de senioridade — júnior, pleno e sênior — e, paralelamente, automatizados com a ferramenta Cypress. A automação foi implementada com comandos customizados, espelhando fielmente cada passo documentado nos cenários manuais e garantindo rastreabilidade total entre os dois métodos. Sete dos cenários foram intencionalmente desenvolvidos como casos de bug-tracking, permitindo avaliar a capacidade de detecção de falhas em cada abordagem. Os dados coletados possibilitam analisar em quais contextos a automação supera ou complementa a análise humana, destacando os benefícios e limitações de cada método no processo de garantia da qualidade de software.
+
+
+\vspace{0.5em}
+\noindent
+\textbf{Palavras-chave:} testes de software; automação de testes; Cypress; qualidade de software; testes manuais; garantia da qualidade.
+
+\vspace{1.0em}
+\noindent
+\textbf{ABSTRACT:} The growing demand for high-quality software has driven the adoption of rigorous validation processes, making software testing an indispensable stage in the development cycle. This work aims to compare the efficiency between manual and automated testing, based on metrics such as execution time, accuracy in failure identification. To this end, 70 test scenarios were developed and applied to the Practice Automation Testing web platform, which were executed manually by three Quality Assurance professionals with different seniority levels — junior, mid-level, and senior — and, in parallel, automated using the Cypress framework. The automation was implemented with custom commands, faithfully mirroring each step documented in the manual scenarios and ensuring full traceability between both methods. Seven of the scenarios were intentionally developed as bug-tracking cases, enabling an assessment of fault detection capability in each approach. The collected data allows analysis of which contexts automation outperforms or complements human analysis, highlighting the benefits and limitations of each method in the software quality assurance process.
+
+
+\vspace{0.5em}
+\noindent
+\textbf{Keywords:} software testing; test automation; Cypress; software quality; manual testing; quality assurance.
+%==========================================================================
+% 1. INTRODUÇÃO
+%==========================================================================
+\section{INTRODUÇÃO}
+A crescente demanda por softwares de qualidade tem impulsionado a adoção de processos robustos de validação, tornando a identificação precoce de falhas e defeitos uma etapa essencial. Detectar problemas nas fases iniciais do desenvolvimento contribui para a redução de custos com manutenção e aumenta a confiabilidade do sistema. Nesse contexto, os testes de software assumem um papel fundamental, assegurando que o produto final atenda às especificações e funcione corretamente em diferentes condições de uso. Essa perspectiva é destacada em estudo recente publicado pela revista científica Núcleo do Conhecimento \cite{nucleodoconhecimento}.
+
+A automação de testes surge como um elemento facilitador, reduzindo o tempo necessário para produção e manutenção. Ao automatizar a execução de testes, as equipes de desenvolvimento podem obter feedback mais rápido, aprimorar a cobertura de testes e mitigar riscos associados a falhas críticas. No entanto, um dos desafios enfrentados na adoção da automação está relacionado às expectativas iniciais sobre seu impacto nos custos de implantação e manutenção. Embora seja possível automatizar diversos aspectos do processo de teste, é necessário um planejamento estratégico para definir quais testes são mais vantajosos para automação, evitando desperdício de recursos \cite{nucleodoconhecimento}.
+
+O objetivo principal do teste de software é demonstrar que o programa executa corretamente suas funções designadas, além de identificar possíveis defeitos antes que o sistema seja disponibilizado para uso. Considerando os modelos modernos de desenvolvimento, a antecipação dos testes para as fases iniciais do ciclo de vida do software é uma abordagem essencial para reduzir custos e aprimorar a qualidade do produto final \cite{SOMMERVILE}. Da mesma forma, destaca-se que os testes podem ser interpretados de maneira intuitiva ou formal, sendo indispensável a verificação do comportamento do sistema por meio de execuções controladas para garantir sua conformidade com os requisitos estabelecidos \cite{PRESSMAN}.
+
+A integração contínua de testes durante o desenvolvimento é crucial para evitar que falhas cheguem ao usuário final. Além de detectar bugs, os testes têm um papel preventivo, garantindo que os erros sejam corrigidos antes mesmo de se tornarem problemas críticos. O processo de teste envolve tanto abordagens manuais quanto automatizadas. No teste manual, os analistas executam o software com diferentes conjuntos de dados para verificar se os resultados correspondem ao esperado. Já no teste automatizado, os cenários de teste são codificados e executados repetidamente conforme o sistema evolui, proporcionando maior eficiência e confiabilidade \cite{SOMMERVILE}.
+
+Com o avanço das linguagens de programação, \textit{frameworks} e bibliotecas comerciais, o desenvolvimento de software tornou-se mais ágil e acessível, permitindo a entrega de aplicações em prazos reduzidos. Essa evolução trouxe maior flexibilidade aos processos de desenvolvimento, tornando-os mais dinâmicos e adaptáveis às necessidades do mercado \cite{souza_automacao_2023}. No entanto, essa flexibilidade também apresenta desafios em relação à qualidade do software. A rápida iteração e evolução dos sistemas podem resultar em falhas inesperadas e comportamentos indesejados, tornando a validação um processo essencial. Nesse contexto, garantir a confiabilidade das aplicações, especialmente em plataformas web e mobile, tornou-se uma prioridade para as equipes de desenvolvimento \cite{souza_automacao_2023}. A automação de testes surge como uma solução eficaz para esse desafio, permitindo a validação contínua das funcionalidades do sistema de forma rápida e eficiente. O uso de ferramentas automatizadas reduz significativamente o tempo gasto com testes manuais, garantindo maior precisão e abrangência na detecção de falhas \cite{gandini2002}.
+
+Tendo em vista os desafios enfrentados na área de desenvolvimento de software, este estudo teve como objetivo geral comparar a eficiência entre testes manuais e automatizados no desenvolvimento de software, com base em métricas de tempo, precisão e identificação de falhas. Para alcançar esse propósito, os objetivos específicos consistiram em: compreender a importância da aplicação de testes automatizados no desenvolvimento de software; comparar o tempo de execução entre testes manuais e automatizados; avaliar a relevância dos testes automatizados nos processos de desenvolvimento moderno; analisar o uso de ferramentas de automação de testes, como Cypress, Selenium e Robot-framework; e propor um modelo de integração de testes automatizados no ciclo de desenvolvimento ágil com base em práticas de DevOps.
+
+A qualidade de um sistema de software está diretamente relacionada à forma como ele é projetado, implementado e testado. De acordo com \citeonline{SOMMERVILE}, assegurar que o sistema atenda aos seus requisitos funcionais e não funcionais é o principal objetivo dos testes de software, sendo esse um processo essencial para garantir confiabilidade e robustez no produto final. A verificação de qualidade deve ocorrer ao longo de todo o ciclo de vida do software, desde a concepção até a entrega, e não apenas na fase final de desenvolvimento.
+
+A Garantia da Qualidade (QA), por sua vez, representa um conjunto mais amplo de práticas e políticas organizadas para prevenir falhas e garantir que os processos de desenvolvimento sigam padrões consistentes. \citeonline{PRESSMAN} destaca que QA envolve atividades de auditoria, revisão e controle, funcionando como um mecanismo de suporte à engenharia de software, enquanto os testes atuam diretamente na validação prática do comportamento do sistema.
+
+Os testes de software podem ser classificados conforme o nível em que são aplicados durante o ciclo de desenvolvimento. Os principais níveis são: teste de unidade, teste de integração, teste de sistema e teste de aceitação \citeonline{SOMMERVILE}. Além dessa classificação por nível, há também a distinção entre testes funcionais e não funcionais. Testes funcionais verificam se o sistema executa corretamente suas funções esperadas, enquanto os testes não funcionais avaliam atributos como desempenho, segurança, usabilidade e escalabilidade \cite{myers2012}. Em projetos ágeis, testes de regressão, testes unitários e de integração são os mais indicados para automação, devido à sua repetibilidade e estabilidade \citeonline{gandini2002}.
+
+Testes manuais envolvem a execução direta dos cenários por um analista, que interage com a aplicação e verifica se os comportamentos estão de acordo com o esperado. Essa abordagem é útil para testes exploratórios e de usabilidade \cite{PRESSMAN}. Apesar de sua flexibilidade, os testes manuais possuem limitações importantes, como o custo elevado de tempo e o risco de inconsistência devido à fadiga dos profissionais \cite{gandini2002}.
+
+Por outro lado, os testes automatizados consistem na criação de scripts que executam casos de teste de forma programada, sem necessidade de intervenção humana. A automação reduz erros humanos, aumenta a padronização e proporciona respostas mais rápidas no ciclo de desenvolvimento \citeonline{SOMMERVILE}. Ferramentas como Selenium, Cypress e Robot Framework oferecem recursos poderosos para simular interações complexas e gerar relatórios detalhados \cite{souza_automacao_2023}. Estudos como o de \citeonline{matos2020esus} apontam que sistemas que utilizam automação apresentam melhorias significativas em estabilidade, facilidade de manutenção e escalabilidade.
+
+Diversos trabalhos acadêmicos têm explorado a eficiência da automação de testes. O estudo de \citeonline{teixeira_alise_2022} realizou uma análise comparativa entre as ferramentas Capybara e Cypress, indicando a superioridade do Cypress em termos de agilidade e facilidade de uso. De forma semelhante, \citeonline{soares_comparativo_2022} comparou o Cypress com o Selenium em testes de ponta a ponta (*end-to-end*), concluindo que o Cypress apresentou melhor performance e facilidade de integração. Adicionalmente, \citeonline{farias_alise_2024} expandiu essa análise ao comparar Selenium WebDriver, Cypress e Playwright, destacando o Playwright como uma ferramenta altamente promissora para o ambiente web atual.
+
+No cenário prático de desenvolvimento integrado, \citeonline{matos2020esus} analisou o aplicativo e-SUS AB Atividade Coletiva sob uma esteira de integração contínua, evidenciando melhorias consideráveis na estabilidade e feedback dos usuários na versão que continha testes automatizados. O uso de novas tecnologias também foi mapeado por \citeonline{ferreira2025acceptance}, que investigou a aplicação de modelos de linguagem de grande escala (LLMs) na geração automatizada de testes com Cypress, obtendo 92\% de aproveitamento dos testes gerados. Por fim, \citeonline{lima2017selenium} realizou um estudo de caso baseado no modelo MPT-Br utilizando Selenium, confirmando o aumento na taxa de detecção de falhas e maior agilidade no ciclo de desenvolvimento.
+
+%==========================================================================
+% 2. MATERIAIS E MÉTODOS (Ajustado para o passado)
+%==========================================================================
+\section{MATERIAIS E MÉTODOS}
+A metodologia deste estudo buscou avaliar a eficiência e precisão dos testes automatizados em comparação aos testes manuais, considerando o desempenho de profissionais de diferentes níveis de senioridade na área de Qualidade de Software (QA). A pesquisa caracterizou-se como quantitativa e experimental, pois coletou dados mensuráveis sobre tempo e precisão na execução de ambas as abordagens.
+
+Inicialmente, foi elaborado um plano de testes contendo 70 cenários de teste, incluindo tanto casos bem-sucedidos quanto casos com falhas intencionais (bugs). O plano foi entregue a três profissionais de QA com diferentes níveis de senioridade (júnior, pleno e sênior), que executaram os testes de forma manual. 
+
+Durante a execução dos testes manuais, foram coletados dados sobre o tempo gasto na execução dos testes, a capacidade de detecção de bugs inseridos propositadamente nos cenários e a qualidade dos relatórios de teste, considerando a clareza, nível de detalhe e evidências apresentadas (capturas de tela, logs, descrições de falhas).
+
+Paralelamente, foi desenvolvida uma automação para a execução dos mesmos 70 cenários utilizando o framework Cypress. A execução automatizada permitiu medir de forma controlada o tempo de execução total, bem como a precisão na identificação de bugs e falhas esperadas. O desenvolvimento da suíte automatizada demandou um investimento inicial de 23 horas e 40 minutos, compreendendo a configuração do ambiente, a implementação dos comandos customizados e a validação de todos os cenários. É importante destacar que esse custo de desenvolvimento não é considerado nas comparações de tempo de execução apresentadas neste estudo, sendo relevante para análises de viabilidade e retorno sobre o investimento em contextos de longo prazo. 
+
+A pesquisa contou com a participação ativa dos três analistas de qualidade de software para os testes manuais, enquanto a automação foi rodada sob as mesmas condições e cenários para permitir um comparativo direto. Os dados coletados foram tabulados e analisados de forma comparativa, verificando o desempenho dos profissionais em relação ao tempo, a eficiência da automação em cobertura de falhas e as principais discrepâncias na identificação de defeitos entre os métodos analítico e programático. Essa abordagem experimental permitiu avaliar em quais cenários a automação superou ou complementou a análise humana.
+
+%==========================================================================
+% 3. RESULTADOS E DISCUSSÃO (Nova seção obrigatória)
+%==========================================================================
+\section{RESULTADOS E DISCUSSÃO}
+Nesta seção, são apresentados e discutidos os resultados obtidos a partir do experimento comparativo entre os testes manuais executados pelos três profissionais de Quality Assurance (QA) com diferentes níveis de senioridade — júnior, pleno e sênior — e a execução automatizada dos cenários com Cypress. Ao todo, foram executados 70 cenários de teste na plataforma \textit{Practice Automation Testing}, sendo 63 cenários funcionais classificados como aprovados no gabarito e 7 cenários do tipo \textit{bug-tracking}, desenvolvidos intencionalmente para falhar e avaliar a capacidade de detecção de defeitos em cada abordagem.
+
+%------------------------------------------------------------------
+\subsection{TEMPO DE EXECUÇÃO}
+%------------------------------------------------------------------
+
+O tempo total de execução representa uma das métricas centrais deste estudo. A Tabela~\ref{tab:tempo} apresenta o tempo registrado por cada QA e pelo Cypress para a execução completa dos 70 cenários.
+
+\begin{table}[H]
+\captionsetup{skip=2pt, singlelinecheck=false, justification=centering}
+\caption{Comparativo de tempo de execução (70 cenários)}
+\label{tab:tempo}
+\renewcommand{\arraystretch}{1.0}
+\setlength{\extrarowheight}{4pt}
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{X c c c}
+\hline
+\textbf{Executor} & \textbf{Nível} & \textbf{Tempo Total} & \textbf{Tempo médio/cenário} \\
+\hline
+QA Júnior & Júnior & 1h 35min & $\approx$ 1min 21s \\
+QA Pleno  & Pleno  & 2h 23min & $\approx$ 2min 02s \\
+QA Sênior & Sênior & 2h 00min & $\approx$ 1min 42s \\
+Cypress   & Automação & 28min 35s & $\approx$ 24s \\
+\hline
+\end{tabularx}
+\vspace{2mm}\par
+\noindent Fonte: Do autor.
+\end{table}
+
+Os dados evidenciam que a automação concluiu os 70 cenários em apenas \textbf{28 minutos e 35 segundos}, tempo significativamente inferior ao de qualquer um dos profissionais humanos. O QA júnior apresentou o menor tempo entre os testadores manuais (1h35min), registrando uma diferença de aproximadamente \textbf{3,3 vezes} em relação à automação. O QA pleno registrou o maior tempo manual (2h23min), enquanto o QA sênior levou 2h00min, posicionando-se entre os demais. É importante destacar que os tempos manuais incluem atividades cognitivas de análise, registro de evidências e tomada de decisão, que constituem esforço intelectual não replicável diretamente por scripts automatizados.
+
+%------------------------------------------------------------------
+\subsection{DETECÇÃO DE FALHAS -- BUG-TRACKING}
+%------------------------------------------------------------------
+
+Dos 70 cenários executados, 7 foram intencionalmente desenvolvidos como casos de \textit{bug-tracking}, ou seja, cenários nos quais o sistema apresenta comportamento incorreto já documentado. O gabarito da automação Cypress serviu como referência: todos os 7 bugs foram detectados pela ferramenta, resultando em falhas esperadas e rastreadas. A Tabela~\ref{tab:bugs_cenarios} apresenta, por cenário, os resultados de detecção de cada executor.
+
+\begin{table}[H]
+\captionsetup{skip=2pt, singlelinecheck=false, justification=centering}
+\caption{Detecção de bugs por cenário e executor}
+\label{tab:bugs_cenarios}
+\renewcommand{\arraystretch}{1.0}
+\setlength{\extrarowheight}{4pt}
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{l X c c c c}
+\hline
+\textbf{ID} & \textbf{Descrição resumida} & \textbf{Júnior} & \textbf{Pleno} & \textbf{Sênior} & \textbf{Cypress} \\
+\hline
+HP-02 & Arrivals: quatro itens esperados          & Sim & Não & Sim & Sim \\
+SH-10 & Destaque de promoção na 1ª fileira        & Não & Não & Sim & Sim \\
+LG-08 & \textit{Remember me} marcado por padrão   & Sim & Sim & Sim & Sim \\
+RG-03 & Botão \textit{Register} ativo com e-mail vazio & Não & Não & Sim & Sim \\
+RG-04 & Botão \textit{Register} ativo com senha vazia  & Não & Não & Sim & Sim \\
+RG-05 & Botão \textit{Register} ativo com campos vazios & Não & Não & Sim & Sim \\
+CA-12 & Limite máximo de produtos no carrinho     & Sim & Não & Não & Sim \\
+\hline
+\textbf{Total detectado} & & \textbf{3/7} & \textbf{1/7} & \textbf{6/7} & \textbf{7/7} \\
+\hline
+\end{tabularx}
+\vspace{2mm}\par
+\noindent Fonte: Do autor.
+\end{table}
+
+A Tabela~\ref{tab:taxa_deteccao} consolida as taxas de detecção e as principais métricas de precisão por executor.
+
+\begin{table}[H]
+\captionsetup{skip=2pt, singlelinecheck=false, justification=centering}
+\caption{Taxa de detecção de bugs e falsos positivos por executor}
+\label{tab:taxa_deteccao}
+\renewcommand{\arraystretch}{1.0}
+\setlength{\extrarowheight}{4pt}
+\setlength{\tabcolsep}{1pt}
+\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X *{5}{>{\centering\arraybackslash}X}}
+\hline
+\textbf{Executor} & \textbf{Bugs detectados} & \textbf{Taxa de detecção} & \textbf{Bugs perdidos} & \textbf{Falsos positivos} & \textbf{Precisão} \\
+\hline
+Júnior  & 3/7 & 42,9\% & 4 & 3 & 50,0\% \\
+Pleno   & 1/7 & 14,3\% & 6 & 0 & 100,0\% \\
+Sênior  & 6/7 & 85,7\% & 1 & 6 & 50,0\% \\
+Cypress & 7/7 & 100,0\% & 0 & 0 & 100,0\% \\
+\hline
+\end{tabularx}
+\vspace{2mm}\par
+\noindent Fonte: Do autor.
+\end{table}
+
+O Cypress foi o único executor capaz de identificar todos os 7 defeitos intencionais, atingindo 100\% de taxa de detecção sem gerar nenhum falso positivo. Entre os testadores humanos, o QA sênior obteve o melhor desempenho, com 85,7\% de detecção, deixando de identificar apenas o cenário CA-12. Em sua planilha, o sênior registrou a observação ``o sistema aceita'' para esse cenário, optando por não classificar a ausência de limite como uma falha — o que revela uma diferença de interpretação do critério de aceite. O QA júnior detectou 3 dos 7 bugs (42,9\%), incluindo HP-02, LG-08 e CA-12, mas não identificou os cenários RG-03, RG-04 e RG-05, todos relacionados ao comportamento do botão \textit{Register} quando os campos obrigatórios estão vazios. O QA pleno detectou apenas 1 bug (14,3\%), o LG-08, deixando os 6 demais sem identificação.
+
+%------------------------------------------------------------------
+\subsection{FALSOS POSITIVOS E ANÁLISE QUALITATIVA}
+%------------------------------------------------------------------
+
+Além dos bugs intencionais, analisaram-se os chamados \textit{falsos positivos}: cenários que, segundo o gabarito da automação, deveriam ser aprovados, mas foram marcados como falha pelos testadores humanos. A Tabela~\ref{tab:falsos_positivos} detalha esses casos.
+
+\begin{table}[H]
+\captionsetup{skip=2pt, singlelinecheck=false, justification=centering}
+\caption{Falsos positivos registrados por executor}
+\label{tab:falsos_positivos}
+\renewcommand{\arraystretch}{1.0}
+\setlength{\extrarowheight}{4pt}
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{l c X}
+\hline
+\textbf{Executor} & \textbf{Qtd.} & \textbf{Cenários e observações registradas} \\
+\hline
+Júnior  & 3 & LG-04 (sem observação registrada); EN-09 e EN-14 (campo ``Address 2'' reportado como não visível) \\
+Pleno   & 0 & --- \\
+Sênior  & 6 & HP-05 (redirecionamento inesperado ao clicar no carrinho vazio); SH-06 e SH-07 (ordenação de preços por filtro incorreta); LG-05 (exibição de apenas uma mensagem de validação); EN-13 (campo de estado/região como caixa de texto); CA-08 (mensagem de cupom divergente da esperada) \\
+Cypress & 0 & --- \\
+\hline
+\end{tabularx}
+\vspace{2mm}\par
+\noindent Fonte: Do autor.
+\end{table}
+
+O Cypress e o QA pleno não registraram falsos positivos. O QA júnior apresentou 3 casos, dois dos quais relacionados à visibilidade do campo ``Address 2'', que pode não ter sido localizado por ausência de rolagem da página durante a execução. O QA sênior registrou o maior número de falsos positivos (6), porém suas observações revelam que tais marcações não decorrem de erros de interpretação triviais: em SH-06 e SH-07, ele identificou uma inconsistência real na ordenação dos produtos pelos filtros de preço — comportamento que os scripts Cypress não detectaram por não verificarem a ordenação completa do conjunto de resultados. Em CA-08, a mensagem de retorno do sistema era diferente da descrita no cenário. Em EN-13, o campo de estado de endereço de envio se comportava como caixa de texto, não como lista selecionável. Essas observações indicam que o QA sênior aplicou critérios avaliativos além do escopo estritamente documentado, identificando comportamentos potencialmente problemáticos que os testes automatizados, por design, não capturam.
+
+%------------------------------------------------------------------
+\subsection{DISCUSSÃO COMPARATIVA}
+%------------------------------------------------------------------
+
+Os dados coletados permitem traçar um panorama abrangente sobre as diferenças entre as abordagens manual e automatizada neste experimento. Sob a perspectiva da \textbf{velocidade de execução}, o Cypress demonstrou superioridade expressiva, concluindo a suíte completa de 70 cenários em uma fração do tempo necessário a qualquer dos testadores humanos. Essa característica é especialmente relevante em ambientes de integração contínua, nos quais os testes são executados repetidamente a cada nova versão do software \cite{matos2020esus}.
+
+Em termos de \textbf{cobertura e consistência na detecção de falhas}, o Cypress também se destacou como o único executor a identificar 100\% dos defeitos intencionalmente inseridos. A automação não é influenciada por fatores subjetivos como fadiga, variações de interpretação ou pressão de tempo, o que garante resultados determinísticos e reproducíveis a cada execução. Essa consistência representa uma das principais vantagens dos testes automatizados, conforme ressaltado por \citeonline{SOMMERVILE} e corroborado pelos estudos de \citeonline{soares_comparativo_2022} e \citeonline{teixeira_alise_2022}.
+
+No entanto, os resultados também evidenciam dimensões que a automação não replica diretamente. O QA sênior, ao identificar comportamentos além dos cenários documentados — como a inconsistência na ordenação por filtro de preço e o redirecionamento inesperado do carrinho vazio — demonstrou uma capacidade exploratória e de julgamento situacional que os scripts automatizados não possuem. Como destacam \citeonline{PRESSMAN} e \citeonline{gandini2002}, os testes exploratórios e baseados na experiência do profissional complementam os testes formais, sendo particularmente valiosos para identificar problemas de usabilidade e comportamentos inesperados fora do escopo documentado.
+
+A variação de desempenho entre os diferentes níveis de senioridade merece atenção. O QA sênior obteve a maior taxa de detecção de bugs (85,7\%), enquanto o QA pleno registrou a menor (14,3\%) e o júnior ficou na posição intermediária (42,9\%). Essa dispersão demonstra que a eficácia dos testes manuais está fortemente atrelada ao perfil e à experiência do profissional, ao passo que os testes automatizados produzem resultados independentes dessas variáveis. Em síntese, os dados indicam que os testes automatizados com Cypress oferecem vantagens substanciais em velocidade e consistência, enquanto os testes manuais — especialmente quando conduzidos por profissionais experientes — agregam valor por meio da análise qualitativa e da exploração além do escopo documentado.
+
+Um aspecto complementar à análise de velocidade é a viabilidade econômica do investimento em automação. A Tabela~\ref{tab:amortizacao} apresenta, para cada executor manual, a economia de tempo obtida por execução da suíte e o número estimado de execuções necessárias para amortizar o custo inicial de desenvolvimento de 23 horas e 40 minutos.
+
+\begin{table}[H]
+\captionsetup{skip=2pt, singlelinecheck=false, justification=centering}
+\caption{Estimativa de amortização do investimento em automação}
+\label{tab:amortizacao}
+\renewcommand{\arraystretch}{1.0}
+\setlength{\extrarowheight}{4pt}
+\setlength{\tabcolsep}{1pt}
+\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X *{4}{>{\centering\arraybackslash}X}}
+\hline
+\textbf{Executor} & \textbf{Tempo de execução manual} & \textbf{Tempo de execução Cypress} & \textbf{Economia por execução} & \textbf{Execuções para amortizar} \\
+\hline
+QA Júnior & 1h 35min & 28min 35s & $\approx$ 66 min & $\approx$ 22 \\
+QA Pleno  & 2h 23min & 28min 35s & $\approx$ 114 min & $\approx$ 13 \\
+QA Sênior & 2h 00min & 28min 35s & $\approx$ 91 min & $\approx$ 16 \\
+\hline
+\end{tabularx}
+\vspace{2mm}\par
+\noindent Fonte: Do autor.
+\end{table}
+
+Os dados indicam que, a partir de 13 a 22 execuções, o tempo acumulado economizado supera o custo de desenvolvimento da suíte. Em ambientes de integração contínua, nos quais os testes são executados a cada ciclo de entrega, esse tempo tende a ser atingido rapidamente \cite{gandini2002}.
+
+%==========================================================================
+% 4. CONCLUSÃO
+%==========================================================================
+\section{CONCLUSÃO}
+Este trabalho teve como objetivo comparar a eficiência entre testes manuais e automatizados no contexto do desenvolvimento de software, avaliando as métricas de tempo de execução, taxa de detecção de falhas e ocorrência de falsos positivos. Para isso, foram elaborados 70 cenários de teste aplicados à plataforma \textit{Practice Automation Testing}, executados por três profissionais de QA com diferentes níveis de senioridade e, em paralelo, automatizados com o \textit{framework} Cypress.
+
+Os resultados obtidos respondem de forma clara aos objetivos específicos propostos. Em relação ao \textbf{tempo de execução}, a automação concluiu os 70 cenários em 28 minutos e 35 segundos, enquanto os testadores humanos demandaram entre 1h35min e 2h23min — uma diferença de 3,3 a 5,0 vezes a mais em favor da automação. Esse dado confirma o que a literatura já aponta: a automação é especialmente vantajosa em ciclos repetitivos de teste, como os que ocorrem em ambientes de integração e entrega contínua \cite{matos2020esus}.
+Cabe, no entanto, contextualizar esse resultado à luz do investimento inicial exigido pela automação. O desenvolvimento da suíte Cypress demandou 23 horas e 40 minutos, custo que não incide sobre a execução manual. Conforme demonstrado na Tabela~\ref{tab:amortizacao}, o número de execuções necessárias para amortizar esse investimento varia de 13 a 22, dependendo do nível de senioridade do testador manual considerado. Em projetos reais, nos quais os testes são executados repetidamente a cada ciclo de desenvolvimento, esse limiar tende a ser alcançado rapidamente, o que reforça a viabilidade da automação como investimento de longo prazo \cite{gandini2002}.
+Quanto à \textbf{precisão na identificação de falhas}, o Cypress detectou 100\% dos 7 defeitos intencionalmente inseridos nos cenários de \textit{bug-tracking}, sem registrar nenhum falso positivo. Entre os profissionais humanos, o QA sênior obteve o melhor desempenho (85,7\% de detecção), seguido pelo júnior (42,9\%) e pelo pleno (14,3\%). A amplitude dessa variação demonstra que a eficácia dos testes manuais está diretamente condicionada ao perfil e à experiência do profissional, ao passo que a automação produz resultados determinísticos e independentes dessas variáveis a cada execução.
+
+Ao mesmo tempo, a análise dos falsos positivos revelou uma dimensão que os testes automatizados não capturam diretamente. O QA sênior, ao registrar 6 falsos positivos, identificou comportamentos reais de inconsistência no sistema — como a ordenação incorreta por filtro de preço e o comportamento inesperado do campo de estado de endereço de envio — que os scripts Cypress não detectaram por não incluírem verificações além do escopo documentado. Essa constatação reforça a visão de que testes manuais conduzidos por profissionais experientes possuem valor qualitativo e exploratório que complementa, e não substitui, a automação \cite{PRESSMAN}.
+
+Conclui-se, portanto, que as duas abordagens são complementares: a automação supera os testes manuais em velocidade, consistência e cobertura formal, sendo mais adequada para a validação sistemática de requisitos funcionais documentados; enquanto os testes manuais, especialmente conduzidos por profissionais sêniores, agregam valor por meio da análise exploratória, da percepção de usabilidade e da identificação de comportamentos inesperados fora do escopo.
+
+Este estudo apresenta como limitações o fato de ter sido realizado em uma única plataforma de teste pública, com um conjunto fixo de 70 cenários e três profissionais, o que restringe a generalização direta dos resultados. Como \textbf{trabalhos futuros}, sugere-se a replicação do experimento em sistemas de maior complexidade e com maior número de participantes por nível de senioridade; a avaliação do custo de manutenção dos scripts automatizados ao longo do tempo; a integração dos testes Cypress em uma esteira de CI/CD para mensurar o impacto no ciclo de entrega; e a investigação do uso de modelos de linguagem de grande escala (LLMs) na geração automatizada de casos de teste a partir de documentação, conforme proposto por \citeonline{ferreira2025acceptance}.
+
+%==========================================================================
+% DECLARAÇÃO DE USO DE INTELIGÊNCIA ARTIFICIAL
+%==========================================================================
+\section*{Declaração de Uso de Inteligência Artificial}
+Os autores declaram que ferramentas de Inteligência Artificial generativa foram utilizadas exclusivamente como apoio auxiliar à elaboração deste trabalho, incluindo assistência na revisão linguística, estruturação textual e organização de ideias. Nenhuma ferramenta de IA foi utilizada para substituição da autoria intelectual, análise científica, interpretação dos resultados ou tomada de decisões acadêmicas. A responsabilidade integral pelo conteúdo, originalidade, veracidade das informações e conformidade com os princípios de integridade científica permanece integralmente atribuída aos autores.
+
+%==========================================================================
+% REFERÊNCIAS
+%==========================================================================
+\bibliographystyle{abntex2-unesc}
+\renewcommand{\refname}{REFERÊNCIAS}
+\bibliography{referencias} 
+
+\end{document}
